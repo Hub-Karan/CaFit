@@ -1,0 +1,56 @@
+import * as React from "react";
+import Svg, { G, Text, TSpan, Path } from "react-native-svg";
+
+const SvgClockMeter = (props) => (
+    <Svg
+        xmlns="http://www.w3.org/2000/svg"
+        width={250}
+        height={320}
+        {...props}
+        viewBox="0 0 250 320"
+    >
+        <G data-name="Group 1601">
+            <G
+                data-name="Group 1519"
+                fill="#707070"
+                fontFamily="Quicksand-Bold, Quicksand"
+                fontWeight={700}
+            >
+                <Text
+                    data-name="15:10"
+                    transform="translate(45.238 189.619)"
+                    fontSize={69}
+                >
+                    <TSpan x={0} y={0}>
+                        {"15:10"}
+                    </TSpan>
+                </Text>
+                <Text transform="translate(95.238 18)" fontSize={18}>
+                    <TSpan x={0} y={0}>
+                        {"Time"}
+                    </TSpan>
+                </Text>
+                <G data-name="Group 1049" fontSize={16}>
+                    <Text data-name="Min 50" transform="translate(34.524 316)">
+                        <TSpan x={0} y={0}>
+                            {"Min 50"}
+                        </TSpan>
+                    </Text>
+                    <Text data-name="Max 156" transform="translate(150 316)">
+                        <TSpan x={0} y={0}>
+                            {"Max 156"}
+                        </TSpan>
+                    </Text>
+                </G>
+            </G>
+            <Path
+                data-name="Path 735"
+                d="M0 160.614a125 125 0 1 0 125.09-125.09A124.875 124.875 0 0 0 0 160.614Zm13.718 0A111.282 111.282 0 1 0 125.09 49.242 111.278 111.278 0 0 0 13.718 160.614Z"
+                fill="#f68d5f"
+                fillRule="evenodd"
+            />
+        </G>
+    </Svg>
+);
+
+export default SvgClockMeter;
