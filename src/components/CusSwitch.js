@@ -17,7 +17,7 @@ const CusSwitch = (props) => {
     const customSwitch = useRef(new Animated.Value(0)).current;
     // console.log(customSwitch,"switch");
 
-    const switchPress = () => {
+    const switchPress = (props) => {
         let val = parseInt(JSON.stringify(customSwitch));
         setValue((prev) => {
             return !prev;

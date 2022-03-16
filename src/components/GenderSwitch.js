@@ -12,10 +12,27 @@ const GenderSwitch = (props) => {
     const [gender, setGender] = useState("Male");
 
     return (
-        <View style={Styles.genderSwitchContainer}>
+        <View
+            style={{
+                backgroundColor: props.bgColor,
+                width: props.width,
+                height: props.height,
+                borderRadius: props.radius,
+                justifyContent: "space-between",
+                alignItems: "center",
+                flexDirection: "row",
+                padding: 3,
+            }}
+        >
             <Pressable
                 onPress={() => setGender("Male")}
-                style={Styles.btnContainer}
+                style={{
+                    zIndex: 2,
+                    width: "50%",
+                    height: "100%",
+                    justifyContent: "center",
+                    alignItems: "center",
+                }}
             >
                 <View>
                     <Text
@@ -30,7 +47,13 @@ const GenderSwitch = (props) => {
             </Pressable>
             <Pressable
                 onPress={() => setGender("Female")}
-                style={Styles.btnContainer}
+                style={{
+                    zIndex: 2,
+                    width: "50%",
+                    height: "100%",
+                    justifyContent: "center",
+                    alignItems: "center",
+                }}
             >
                 <View>
                     <Text
@@ -58,25 +81,5 @@ const GenderSwitch = (props) => {
         </View>
     );
 };
-
-const Styles = StyleSheet.create({
-    genderSwitchContainer: {
-        backgroundColor: props.bgColor,
-        width: props.width,
-        height: props.height,
-        borderRadius: props.radius,
-        justifyContent: "space-between",
-        alignItems: "center",
-        flexDirection: "row",
-        padding: 3,
-    },
-    btnContainer: {
-        zIndex: 2,
-        width: "50%",
-        height: "100%",
-        justifyContent: "center",
-        alignItems: "center",
-    },
-});
 
 export default GenderSwitch;
