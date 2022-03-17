@@ -2,7 +2,7 @@ import * as React from "react";
 import Svg, { G, Circle, Path } from "react-native-svg";
 
 const SvgRunning = (props) => {
-    console.log(props, " svgRUnning prop");
+    // console.log(props, " svgRUnning prop");
 
     return (
         <Svg

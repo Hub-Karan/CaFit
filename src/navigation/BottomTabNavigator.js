@@ -160,7 +160,7 @@ export const WorkoutStack = () => {
 // };
 
 export const RunningStackScreen = (props) => {
-    console.log(props);
+    // console.log(props);
     return (
         <Stack.Navigator>
             <Stack.Screen
@@ -317,7 +317,12 @@ const BottomTabNavigator = (props) => {
             backBehavior={"history"}
             initialRouteName={props.route.params.nextScreen}
             tabBar={() => {
-                return <CustomTab navigation={navigation} />;
+                return (
+                    <CustomTab
+                        currentTabScreen={props.route.params.nextScreen}
+                        navigation={navigation}
+                    />
+                );
             }}
         >
             <Tab.Screen

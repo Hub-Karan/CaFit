@@ -7,7 +7,7 @@ import { useNavigation } from "@react-navigation/native";
 const HeaderLeft = (props) => {
     const navigation = useNavigation();
 
-    console.log(props, "headerleft");
+    // console.log(props, "headerleft");
     return (
         <TouchableNativeFeedback onPress={() => navigation.goBack()}>
             <View style={{ marginLeft: 20 }}>

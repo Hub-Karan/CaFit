@@ -24,10 +24,13 @@ const CustomTabItem = (props) => {
 const CustomTab = (props) => {
     // console.log(props, "custom navigation tab");
     const { navigation } = props;
+    const currentTabScreen = props.currentTabScreen;
 
     const currentRoute = NavigationRef.current.getCurrentRoute().name;
 
-    console.log(currentRoute, "current Route");
+    console.log(currentRoute, "current tab Route");
+
+    console.log(currentTabScreen, "current Tab screen with route");
 
     // console.log(navigation.getState(), " state");
 
@@ -38,7 +41,9 @@ const CustomTab = (props) => {
                     <SvgRunning
                         color={
                             currentRoute === "Running" ||
-                            currentRoute === "RunningScreen"
+                            currentRoute === "RunningScreen" ||
+                            (currentRoute === "Drawer" &&
+                                currentTabScreen === "Running")
                                 ? color.primaryColor
                                 : undefined
                         }
@@ -52,7 +57,9 @@ const CustomTab = (props) => {
                         color={
                             currentRoute === "MealPlan" ||
                             currentRoute === "Water" ||
-                            currentRoute === "Food"
+                            currentRoute === "Food" ||
+                            (currentRoute === "Drawer" &&
+                                currentTabScreen === "MealPlan")
                                 ? color.primaryColor
                                 : undefined
                         }
@@ -68,7 +75,9 @@ const CustomTab = (props) => {
                 svgComponent={
                     <SvgMeter
                         color={
-                            currentRoute === "Weight"
+                            currentRoute === "Weight" ||
+                            (currentRoute === "Drawer" &&
+                                currentTabScreen === "Weight")
                                 ? color.primaryColor
                                 : undefined
                         }
@@ -83,7 +92,9 @@ const CustomTab = (props) => {
                             currentRoute === "Setting" ||
                             currentRoute === "SettingScreen" ||
                             currentRoute === "SettingLang" ||
-                            currentRoute === "SettingSocial"
+                            currentRoute === "SettingSocial" ||
+                            (currentRoute === "Drawer" &&
+                                currentTabScreen === "Setting")
                                 ? color.primaryColor
                                 : undefined
                         }

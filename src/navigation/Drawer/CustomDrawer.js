@@ -45,7 +45,7 @@ const DrawerItem = (props) => {
 const CustomDrawer = () => {
     const currentRoute = NavigationRef.current.getCurrentRoute().name;
 
-    console.log(currentRoute, "drawerslide current route");
+    // console.log(currentRoute, "drawerslide current route");
     const navigation = useNavigation();
 
     return (
