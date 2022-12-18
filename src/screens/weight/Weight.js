@@ -6,22 +6,25 @@ import {
     ScrollView,
     Dimensions,
     Animated,
-} from "react-native";
-import React, { useRef } from "react";
+} from 'react-native';
+import React, { useRef } from 'react';
 
-import color from "../../constants/colors/color";
-import fonts from "../../constants/font-layout/font";
-import LeftArrow from "../../components/svg-components/LeftArrow";
-import RightArrow from "../../components/svg-components/RightArrow";
+// CONSTANT
+import color from '../../constants/colors/color';
+import fonts from '../../constants/font-layout/font';
 
-const { width: windowWidth, height: windowHeight } = Dimensions.get("window");
+// SVG
+import LeftArrow from '../../assets/icons/svg-components/LeftArrow';
+import RightArrow from '../../assets/icons/svg-components/RightArrow';
 
-const data = new Array(5).fill("Running");
+const { width: windowWidth, height: windowHeight } = Dimensions.get('window');
+
+const data = new Array(5).fill('Running');
 const CARD_SIZE = windowWidth * 0.6;
 
 const Weight = () => {
     const cardX = useRef(new Animated.Value(0)).current;
-    const [screenSelect, setScreenSelect] = React.useState("Check-Process");
+    const [screenSelect, setScreenSelect] = React.useState('Check-Process');
 
     const renderCard = ({ item, index }) => {
         const inputRange = [
@@ -53,13 +56,13 @@ const Weight = () => {
                 <View style={Styles.child1}>
                     <View style={Styles.processTabContainer}>
                         <TouchableNativeFeedback
-                            onPress={() => setScreenSelect("Check-Process")}
+                            onPress={() => setScreenSelect('Check-Process')}
                         >
                             <View
                                 style={{
                                     ...Styles.checkProcessContainer,
                                     borderColor:
-                                        screenSelect === "Check-Process"
+                                        screenSelect === 'Check-Process'
                                             ? color.primaryColor
                                             : color.textGrey,
                                 }}
@@ -68,7 +71,7 @@ const Weight = () => {
                                     style={{
                                         ...fonts.regularBoldFont4x,
                                         color:
-                                            screenSelect === "Check-Process"
+                                            screenSelect === 'Check-Process'
                                                 ? color.primaryColor
                                                 : color.textGrey,
                                     }}
@@ -78,13 +81,13 @@ const Weight = () => {
                             </View>
                         </TouchableNativeFeedback>
                         <TouchableNativeFeedback
-                            onPress={() => setScreenSelect("My-Weight")}
+                            onPress={() => setScreenSelect('My-Weight')}
                         >
                             <View
                                 style={{
                                     ...Styles.checkProcessContainer,
                                     borderColor:
-                                        screenSelect === "My-Weight"
+                                        screenSelect === 'My-Weight'
                                             ? color.primaryColor
                                             : color.textGrey,
                                 }}
@@ -93,7 +96,7 @@ const Weight = () => {
                                     style={{
                                         ...fonts.regularBoldFont4x,
                                         color:
-                                            screenSelect === "My-Weight"
+                                            screenSelect === 'My-Weight'
                                                 ? color.primaryColor
                                                 : color.textGrey,
                                     }}
@@ -143,9 +146,9 @@ const Weight = () => {
                     <View style={{ flex: 0.1 }}>
                         <View
                             style={{
-                                flexDirection: "row",
-                                alignItems: "center",
-                                justifyContent: "space-between",
+                                flexDirection: 'row',
+                                alignItems: 'center',
+                                justifyContent: 'space-between',
                             }}
                         >
                             <LeftArrow
@@ -170,7 +173,7 @@ const Weight = () => {
                             />
                         </View>
                     </View>
-                    <View style={{ flex: 0.1, width: "40%" }}>
+                    <View style={{ flex: 0.1, width: '40%' }}>
                         <View style={Styles.weightDisplayContainer}>
                             <Text
                                 style={{
@@ -223,20 +226,20 @@ const Styles = StyleSheet.create({
     },
     child1: {
         flex: 1,
-        justifyContent: "center",
-        alignItems: "center",
+        justifyContent: 'center',
+        alignItems: 'center',
     },
     processTabContainer: {
-        justifyContent: "center",
-        alignItems: "center",
-        flexDirection: "row",
+        justifyContent: 'center',
+        alignItems: 'center',
+        flexDirection: 'row',
         marginTop: 20,
     },
     checkProcessContainer: {
         marginHorizontal: 5,
-        width: "43%",
-        height: "100%",
-        alignItems: "center",
+        width: '43%',
+        height: '100%',
+        alignItems: 'center',
         paddingHorizontal: 9,
         paddingVertical: 11,
         borderRadius: 7,
@@ -244,27 +247,27 @@ const Styles = StyleSheet.create({
     },
     myWeightContainer: {
         marginHorizontal: 5,
-        width: "43%",
-        height: "100%",
-        alignItems: "center",
+        width: '43%',
+        height: '100%',
+        alignItems: 'center',
         paddingHorizontal: 9,
         paddingVertical: 11,
         borderRadius: 7,
         borderWidth: 1,
     },
     weightDisplayContainer: {
-        width: "100%",
+        width: '100%',
         borderWidth: 0.8,
-        justifyContent: "center",
-        alignItems: "center",
+        justifyContent: 'center',
+        alignItems: 'center',
         borderRadius: 10,
         borderColor: color.textGrey,
     },
     child2: {
         flex: 7,
 
-        justifyContent: "center",
-        alignItems: "center",
+        justifyContent: 'center',
+        alignItems: 'center',
     },
     cardContainer: {
         width: CARD_SIZE,

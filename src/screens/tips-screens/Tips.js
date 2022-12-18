@@ -1,8 +1,9 @@
-import { View, Text, StyleSheet, ScrollView } from "react-native";
-import React from "react";
+import { View, Text, StyleSheet, ScrollView } from 'react-native';
+import React from 'react';
 
-import color from "../../constants/colors/color";
-import fonts from "../../constants/font-layout/font";
+// CONSTANT
+import color from '../../constants/colors/color';
+import fonts from '../../constants/font-layout/font';
 
 const Tips = (props) => {
     return (
@@ -15,8 +16,8 @@ const Tips = (props) => {
                     <View style={Styles.headerContainer}>
                         <View
                             style={{
-                                justifyContent: "center",
-                                alignItems: "center",
+                                justifyContent: 'center',
+                                alignItems: 'center',
                             }}
                         >
                             <Text
@@ -44,7 +45,7 @@ const Tips = (props) => {
                                     color: color.textGrey,
                                 }}
                             >
-                                {"        "}Lorem ipsum dolor sit amet,
+                                {'        '}Lorem ipsum dolor sit amet,
                                 consectetur adipiscing elit, sed do eiusmod
                                 tempor incididunt ut labore et dolore magna
                                 aliqua. Ut enim ad minim veniam, quis nostrud
@@ -55,7 +56,7 @@ const Tips = (props) => {
                                 occaecat cupidatat non proident, sunt in culpa
                                 qui officia deserunt mollit anim id est
                                 laborum."
-                                {"\n       "}Lorem ipsum dolor sit amet,
+                                {'\n       '}Lorem ipsum dolor sit amet,
                                 consectetur adipiscing elit, sed do eiusmod
                                 tempor incididunt ut labore et dolore magna
                                 aliqua. Ut enim ad minim veniam, quis nostrud
@@ -79,7 +80,7 @@ const Tips = (props) => {
                                     color: color.textGrey,
                                 }}
                             >
-                                {"        "}Lorem ipsum dolor sit amet,
+                                {'        '}Lorem ipsum dolor sit amet,
                                 consectetur adipiscing elit, sed do eiusmod
                                 tempor incididunt ut labore et dolore magna
                                 aliqua. Ut enim ad minim veniam, quis nostrud
@@ -90,7 +91,7 @@ const Tips = (props) => {
                                 occaecat cupidatat non proident, sunt in culpa
                                 qui officia deserunt mollit anim id est
                                 laborum."
-                                {"\n       "}Lorem ipsum dolor sit amet,
+                                {'\n       '}Lorem ipsum dolor sit amet,
                                 consectetur adipiscing elit, sed do eiusmod
                                 tempor incididunt ut labore et dolore magna
                                 aliqua. Ut enim ad minim veniam, quis nostrud
@@ -114,7 +115,7 @@ const Tips = (props) => {
                                     color: color.textGrey,
                                 }}
                             >
-                                {"        "}Lorem ipsum dolor sit amet,
+                                {'        '}Lorem ipsum dolor sit amet,
                                 consectetur adipiscing elit, sed do eiusmod
                                 tempor incididunt ut labore et dolore magna
                                 aliqua. Ut enim ad minim veniam, quis nostrud
@@ -125,7 +126,7 @@ const Tips = (props) => {
                                 occaecat cupidatat non proident, sunt in culpa
                                 qui officia deserunt mollit anim id est
                                 laborum."
-                                {"\n       "}Lorem ipsum dolor sit amet,
+                                {'\n       '}Lorem ipsum dolor sit amet,
                                 consectetur adipiscing elit, sed do eiusmod
                                 tempor incididunt ut labore et dolore magna
                                 aliqua. Ut enim ad minim veniam, quis nostrud
@@ -146,7 +147,7 @@ const Styles = StyleSheet.create({
         backgroundColor: color.secondaryColor,
     },
     child1: {
-        backgroundColor: "red",
+        backgroundColor: color.secondaryColor,
         // flex:1
         height: 200,
     },
@@ -155,12 +156,13 @@ const Styles = StyleSheet.create({
         flex: 2,
     },
     tipsHeaderContainer: {
-        height: "100%",
+        height: '100%',
         backgroundColor: color.textGrey,
     },
     headerContainer: {
         marginVertical: 21,
         paddingHorizontal: 20,
+        backgroundColor: color.secondaryColor,
     },
 });
 

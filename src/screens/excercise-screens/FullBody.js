@@ -1,8 +1,11 @@
-import { View, Text, StyleSheet, ScrollView } from "react-native";
-import React from "react";
+import { View, Text, StyleSheet, ScrollView } from 'react-native';
+import React from 'react';
 
-import WorkoutCard from "../../components/WorkoutCard";
-import color from "../../constants/colors/color";
+// COMPONENT
+import WorkoutCard from '../../components/WorkoutCard';
+
+// CONSTANT
+import color from '../../constants/colors/color';
 
 const FullBody = () => {
     return (

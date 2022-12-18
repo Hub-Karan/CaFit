@@ -7,16 +7,19 @@ import {
     KeyboardAvoidingView,
     Switch,
     ScrollView,
-} from "react-native";
-import React, { useState } from "react";
+} from 'react-native';
+import React, { useState } from 'react';
 
-import CustomSwitch from "../../components/CustomSwitch";
-import CustomButton from "../../components/CustomButton";
-import GenderSwitch from "../../components/GenderSwitch";
-import CusSwitch from "../../components/CusSwitch";
-import Height from "../../components/Height";
-import color from "../../constants/colors/color";
-import fonts from "../../constants/font-layout/font";
+// COMPONENT
+import CustomSwitch from '../../components/CustomSwitch';
+import CustomButton from '../../components/CustomButton';
+import GenderSwitch from '../../components/GenderSwitch';
+import CusSwitch from '../../components/CusSwitch';
+import Height from '../../components/Height';
+
+// CONSTANT
+import color from '../../constants/colors/color';
+import fonts from '../../constants/font-layout/font';
 
 const PersonalDetails = ({ navigation }) => {
     const [isEnabled, setIsEnabled] = useState(false);
@@ -34,7 +37,7 @@ const PersonalDetails = ({ navigation }) => {
                     
                 </View> */}
                 <View style={Styles.personalInfoContainer}>
-                    <View style={{ alignItems: "center" }}>
+                    <View style={{ alignItems: 'center' }}>
                         <Text
                             style={{
                                 ...fonts.primaryFont,
@@ -49,7 +52,7 @@ const PersonalDetails = ({ navigation }) => {
                                 ...fonts.regularFont2x,
                                 paddingHorizontal: 20,
                                 paddingVertical: 5,
-                                textAlign: "center",
+                                textAlign: 'center',
                                 marginTop: 19,
                                 color: color.textGrey,
                             }}
@@ -91,13 +94,13 @@ const PersonalDetails = ({ navigation }) => {
                         </View>
                     </View>
                     <View style={Styles.personalDetailsList}>
-                        <Height text={"Birthday"} />
+                        <Height text={'Birthday'} />
                     </View>
                     <View style={Styles.personalDetailsList}>
-                        <Height text={"Height"} units={"175 cm"} />
+                        <Height text={'Height'} units={'175 cm'} />
                     </View>
                     <View style={Styles.personalDetailsList}>
-                        <Height text={"Weight"} units={"70 Kg"} />
+                        <Height text={'Weight'} units={'70 Kg'} />
                     </View>
                     <View style={Styles.personalDetailsList}>
                         <View>
@@ -124,9 +127,9 @@ const PersonalDetails = ({ navigation }) => {
                 {/* button container */}
                 <View
                     style={{
-                        width: "100%",
-                        justifyContent: "flex-end",
-                        alignItems: "center",
+                        width: '100%',
+                        justifyContent: 'flex-end',
+                        alignItems: 'center',
                         // backgroundColor: "red",
                         flex: 0.2,
                     }}
@@ -135,7 +138,7 @@ const PersonalDetails = ({ navigation }) => {
                         <CustomButton
                             title="Start"
                             color="white"
-                            onPress={() => navigation.navigate("Menu")}
+                            onPress={() => navigation.navigate('Menu')}
                         />
                     </View>
                     <View style={Styles.dotContainer}>
@@ -167,20 +170,20 @@ const Styles = StyleSheet.create({
         // backgroundColor: "yellow",
     },
     personalDetailsList: {
-        flexDirection: "row",
-        justifyContent: "space-between",
-        alignItems: "center",
+        flexDirection: 'row',
+        justifyContent: 'space-between',
+        alignItems: 'center',
         paddingVertical: 20,
         paddingHorizontal: 10,
         borderBottomWidth: 1,
-        borderColor: "#E6E6E6",
+        borderColor: '#E6E6E6',
         flex: 1,
     },
     dotContainer: {
-        justifyContent: "center",
-        alignItems: "center",
-        flexDirection: "row",
-        justifyContent: "center",
+        justifyContent: 'center',
+        alignItems: 'center',
+        flexDirection: 'row',
+        justifyContent: 'center',
         marginVertical: 15,
     },
     dot: {
@@ -224,12 +227,12 @@ const Styles = StyleSheet.create({
     //     color: color.textGrey
     // },
     customBtnContainer: {
-        justifyContent: "flex-end",
+        justifyContent: 'flex-end',
         backgroundColor: color.primaryColor,
-        width: "90%",
+        width: '90%',
         borderRadius: 30,
         marginTop: 20,
-        overflow: "hidden",
+        overflow: 'hidden',
         // bottom: "3%"
     },
 });

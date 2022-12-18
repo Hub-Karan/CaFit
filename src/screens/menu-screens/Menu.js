@@ -7,31 +7,33 @@ import {
     ScrollView,
     Dimensions,
     FlatList,
-} from "react-native";
-import React from "react";
+} from 'react-native';
+import React from 'react';
 
-import MenuCard from "../../components/MenuCard";
-import MenuHeader from "../../components/MenuHeader";
+// COMPONENT
+import MenuCard from '../../components/MenuCard';
+import MenuHeader from '../../components/MenuHeader';
 
-import color from "../../constants/colors/color";
-import fonts from "../../constants/font-layout/font";
-import data from "../../constants/data/menuData";
+// CONSTANT
+import color from '../../constants/colors/color';
+import fonts from '../../constants/font-layout/font';
+import data from '../../constants/data/menuData';
 
-const { width: windowWidth, height: windowHeight } = Dimensions.get("window");
+const { width: windowWidth, height: windowHeight } = Dimensions.get('window');
 
 const Menu = ({ navigation }) => {
     const renderItem = ({ item }) => {
-        return item.screenName === "Empty" ? (
+        return item.screenName === 'Empty' ? (
             <View style={{ flex: 0.3, aspectRatio: 1 }} />
         ) : (
             <TouchableNativeFeedback
                 onPress={() => {
-                    if (item.screenName === "Home") {
-                        return navigation.navigate("Home");
-                    } else if (item.screenName === "Support") {
-                        return navigation.navigate("Support");
+                    if (item.screenName === 'Home') {
+                        return navigation.navigate('Home');
+                    } else if (item.screenName === 'Support') {
+                        return navigation.navigate('Support');
                     }
-                    navigation.navigate("Drawer", {
+                    navigation.navigate('Drawer', {
                         // screen: "BottomTab",
                         screenName: item.screenName,
                     });
@@ -39,15 +41,7 @@ const Menu = ({ navigation }) => {
             >
                 <View style={Styles.menuContainer}>
                     {/* <View> */}
-                    <Image
-                        resizeMode="contain"
-                        style={{
-                            height: undefined,
-                            width: "40%",
-                            aspectRatio: 1,
-                        }}
-                        source={item.imageUrl}
-                    />
+                    {item.imageUrl}
                     {/* </View> */}
                     {/* <View> */}
                     <Text
@@ -126,8 +120,8 @@ const Styles = StyleSheet.create({
         backgroundColor: color.secondaryColor,
         elevation: 5,
         borderRadius: 11,
-        justifyContent: "center",
-        alignItems: "center",
+        justifyContent: 'center',
+        alignItems: 'center',
         // borderWidth: 2
     },
     flatlistContent: {
@@ -135,7 +129,7 @@ const Styles = StyleSheet.create({
     },
     columnWrapper: {
         paddingTop: 15,
-        justifyContent: "space-between",
+        justifyContent: 'space-between',
         marginHorizontal: 10,
     },
     // wrapperView: {

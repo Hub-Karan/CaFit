@@ -21,7 +21,7 @@ const GenderSwitch = (props) => {
                 justifyContent: "space-between",
                 alignItems: "center",
                 flexDirection: "row",
-                padding: 3,
+                padding: 4,
             }}
         >
             <Pressable

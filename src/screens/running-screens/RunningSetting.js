@@ -4,16 +4,22 @@ import {
     StyleSheet,
     TouchableOpacity,
     ScrollView,
-} from "react-native";
-import React from "react";
-import Slider from "@react-native-community/slider";
+} from 'react-native';
+import React from 'react';
 
-import CusSwitch from "../../components/CusSwitch";
+// Slider
+import Slider from '@react-native-community/slider';
 
-import color from "../../constants/colors/color";
-import fonts from "../../constants/font-layout/font";
-import Speaker from "../../components/svg-components/Speaker";
-import SpeakerFull from "../../components/svg-components/SpeakerFull";
+// COMPONENT
+import CusSwitch from '../../components/CusSwitch';
+
+// CONSTANT
+import color from '../../constants/colors/color';
+import fonts from '../../constants/font-layout/font';
+
+// SVG
+import Speaker from '../../assets/icons/svg-components/Speaker';
+import SpeakerFull from '../../assets/icons/svg-components/SpeakerFull';
 
 const SettingSwitch = (props) => {
     return (
@@ -39,10 +45,10 @@ const RunningSetting = () => {
     return (
         <ScrollView contentContainerStyle={{ flexGrow: 1 }}>
             <View style={Styles.settingMainContainer}>
-                <SettingSwitch title={"GPS"} />
-                <SettingSwitch title={"Auto Pause"} />
-                <SettingSwitch title={"Pause run for calls"} />
-                <SettingSwitch title={"Voice Volume"} />
+                <SettingSwitch title={'GPS'} />
+                <SettingSwitch title={'Auto Pause'} />
+                <SettingSwitch title={'Pause run for calls'} />
+                <SettingSwitch title={'Voice Volume'} />
                 <View style={Styles.audioFeedContainer}>
                     <View style={Styles.audioDisplayContainer}>
                         <Text
@@ -66,7 +72,7 @@ const RunningSetting = () => {
                             maximumTrackTintColor={color.textGrey}
                             thumbTintColor={color.primaryColor}
                             style={{
-                                width: "90%",
+                                width: '90%',
                                 height: 20,
                             }}
                         />
@@ -114,7 +120,7 @@ const RunningSetting = () => {
                             maximumTrackTintColor={color.textGrey}
                             thumbTintColor={color.primaryColor}
                             style={{
-                                width: "90%",
+                                width: '90%',
                                 height: 20,
                             }}
                         />
@@ -160,7 +166,7 @@ const RunningSetting = () => {
                             maximumTrackTintColor={color.textGrey}
                             thumbTintColor={color.primaryColor}
                             style={{
-                                width: "90%",
+                                width: '90%',
                                 height: 20,
                             }}
                         />
@@ -176,11 +182,11 @@ const RunningSetting = () => {
                         </View>
                     </View>
                 </View>
-                <SettingSwitch title={"Time"} />
-                <SettingSwitch title={"Distance"} />
-                <SettingSwitch title={"Pace"} />
-                <SettingSwitch title={"Speed"} />
-                <SettingSwitch title={"Calories"} />
+                <SettingSwitch title={'Time'} />
+                <SettingSwitch title={'Distance'} />
+                <SettingSwitch title={'Pace'} />
+                <SettingSwitch title={'Speed'} />
+                <SettingSwitch title={'Calories'} />
             </View>
         </ScrollView>
     );
@@ -193,9 +199,9 @@ const Styles = StyleSheet.create({
         padding: 20,
     },
     runningSettingSwitchContainer: {
-        flexDirection: "row",
-        justifyContent: "space-between",
-        alignItems: "center",
+        flexDirection: 'row',
+        justifyContent: 'space-between',
+        alignItems: 'center',
         marginVertical: 10,
         paddingTop: 8,
         paddingBottom: 14,
@@ -208,14 +214,14 @@ const Styles = StyleSheet.create({
         borderBottomWidth: 0.5,
     },
     audioDisplayContainer: {
-        flexDirection: "row",
-        justifyContent: "space-between",
-        alignItems: "center",
+        flexDirection: 'row',
+        justifyContent: 'space-between',
+        alignItems: 'center',
     },
     speakerContainer: {
-        flexDirection: "row",
-        justifyContent: "space-around",
-        alignItems: "center",
+        flexDirection: 'row',
+        justifyContent: 'space-around',
+        alignItems: 'center',
         marginBottom: 5,
     },
     timeContainer: {
@@ -225,14 +231,14 @@ const Styles = StyleSheet.create({
         borderBottomWidth: 0.5,
     },
     timeDisplayContainer: {
-        flexDirection: "row",
-        justifyContent: "space-between",
-        alignItems: "center",
+        flexDirection: 'row',
+        justifyContent: 'space-between',
+        alignItems: 'center',
     },
     lengthContainer: {
-        flexDirection: "row",
-        justifyContent: "space-around",
-        alignItems: "center",
+        flexDirection: 'row',
+        justifyContent: 'space-around',
+        alignItems: 'center',
         marginBottom: 5,
     },
     distanceContainer: {
@@ -242,9 +248,9 @@ const Styles = StyleSheet.create({
         borderBottomWidth: 0.5,
     },
     distanceDisplayContainer: {
-        flexDirection: "row",
-        justifyContent: "space-around",
-        alignItems: "center",
+        flexDirection: 'row',
+        justifyContent: 'space-around',
+        alignItems: 'center',
     },
 });
 

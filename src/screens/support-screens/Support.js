@@ -5,13 +5,18 @@ import {
     TextInput,
     KeyboardAvoidingView,
     Keyboard,
-} from "react-native";
-import React from "react";
+} from 'react-native';
+import React from 'react';
 
-import color from "../../constants/colors/color";
-import fonts from "../../constants/font-layout/font";
-import Running from "../running-screens/Running";
-import CustomButton from "../../components/CustomButton";
+// CONSTANT
+import color from '../../constants/colors/color';
+import fonts from '../../constants/font-layout/font';
+
+// SCREEN
+import Running from '../running-screens/Running';
+
+// COMPONENT
+import CustomButton from '../../components/CustomButton';
 
 const Support = () => {
     return (
@@ -47,7 +52,7 @@ const Support = () => {
                                 placeholder="Enter your problem"
                                 placeholderTextColor={color.textGrey}
                                 multiline={true}
-                                height={"100%"}
+                                height={'100%'}
                                 textAlignVertical="top"
                                 style={{
                                     ...fonts.regularBoldFont4x,
@@ -57,7 +62,7 @@ const Support = () => {
                         </View>
                     </View>
                 </View>
-                <View style={{ flex: 0.2, justifyContent: "center" }}>
+                <View style={{ flex: 0.2, justifyContent: 'center' }}>
                     <View style={Styles.viewBtnContainer}>
                         <CustomButton title="Send" color="white" />
                     </View>
@@ -87,10 +92,10 @@ const Styles = StyleSheet.create({
     },
     viewBtnContainer: {
         backgroundColor: color.primaryColor,
-        width: "90%",
-        alignSelf: "center",
+        width: '90%',
+        alignSelf: 'center',
         borderRadius: 30,
-        overflow: "hidden",
+        overflow: 'hidden',
     },
 });
 

@@ -1,15 +1,18 @@
-import { View, Text, StyleSheet, ScrollView } from "react-native";
-import React, { useState, useEffect } from "react";
+import { View, Text, StyleSheet, ScrollView } from 'react-native';
+import React, { useState, useEffect } from 'react';
 
-import WorkoutCard from "../../components/WorkoutCard";
+// COMPONENT
+import WorkoutCard from '../../components/WorkoutCard';
 
-import font from "../../constants/font-layout/font";
+// CONSTANT
+import font from '../../constants/font-layout/font';
+import data, { calendarMonth } from '../../constants/data/calendarData';
+import color from '../../constants/colors/color';
+import fonts from '../../constants/font-layout/font';
 
-import data, { calendarMonth } from "../../constants/data/calendarData";
-import color from "../../constants/colors/color";
-import LeftArrow from "../../components/svg-components/LeftArrow";
-import RightArrows from "../../components/svg-components/RightArrow";
-import fonts from "../../constants/font-layout/font";
+// SVG
+import LeftArrow from '../../assets/icons/svg-components/LeftArrow';
+import RightArrows from '../../assets/icons/svg-components/RightArrow';
 
 const Food = () => {
     const todayDate = new Date();
@@ -103,10 +106,10 @@ const Styles = StyleSheet.create({
         flex: 1,
     },
     fullBodyHeaderContainer: {
-        justifyContent: "space-around",
-        alignItems: "center",
+        justifyContent: 'space-around',
+        alignItems: 'center',
         marginVertical: 10,
-        flexDirection: "row",
+        flexDirection: 'row',
     },
 });
 

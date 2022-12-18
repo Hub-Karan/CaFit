@@ -5,16 +5,20 @@ import {
     TouchableNativeFeedback,
     FlatList,
     Alert,
-} from "react-native";
-import React, { useState } from "react";
+} from 'react-native';
+import React, { useState } from 'react';
 
-import CustomButton from "../../components/CustomButton";
-import FitnessClass from "../../components/FitnessClass";
-import data from "../../constants/data/fitnessLevelData";
-import Tick from "../../components/svg-components/Tick";
+// COMPONENT
+import CustomButton from '../../components/CustomButton';
+import FitnessClass from '../../components/FitnessClass';
 
-import color from "../../constants/colors/color";
-import fonts from "../../constants/font-layout/font";
+// CONSTANT
+import data from '../../constants/data/fitnessLevelData';
+import color from '../../constants/colors/color';
+import fonts from '../../constants/font-layout/font';
+
+// SVG
+import Tick from '../../assets/icons/svg-components/Tick';
 
 const FitnessLevel = ({ navigation }) => {
     const [levelSelect, setLevelSelect] = useState({});
@@ -117,7 +121,7 @@ const FitnessLevel = ({ navigation }) => {
                     <CustomButton
                         title="Next"
                         color="white"
-                        onPress={() => navigation.navigate("PersonalDetails")}
+                        onPress={() => navigation.navigate('PersonalDetails')}
                     />
                 </View>
                 <View style={Styles.dotContainer}>
@@ -138,8 +142,8 @@ const Styles = StyleSheet.create({
     fitnessHeaderContainer: {
         flex: 1,
 
-        justifyContent: "flex-start",
-        alignItems: "center",
+        justifyContent: 'flex-start',
+        alignItems: 'center',
     },
     fitnessTextView: {
         marginTop: 12,
@@ -154,31 +158,31 @@ const Styles = StyleSheet.create({
     },
     fitnessBottomContainer: {
         flex: 1.2,
-        justifyContent: "flex-end",
+        justifyContent: 'flex-end',
     },
     fitnessList: {
-        flexDirection: "row",
-        justifyContent: "space-between",
-        alignItems: "center",
+        flexDirection: 'row',
+        justifyContent: 'space-between',
+        alignItems: 'center',
         flex: 1,
     },
     fitnessNotSelectList: {
-        flexDirection: "row",
-        justifyContent: "space-between",
-        alignItems: "center",
+        flexDirection: 'row',
+        justifyContent: 'space-between',
+        alignItems: 'center',
     },
     customBtnContainer: {
         backgroundColor: color.primaryColor,
-        width: "90%",
+        width: '90%',
         borderRadius: 30,
-        alignSelf: "center",
-        overflow: "hidden",
+        alignSelf: 'center',
+        overflow: 'hidden',
     },
     dotContainer: {
-        justifyContent: "center",
-        alignItems: "center",
-        flexDirection: "row",
-        justifyContent: "center",
+        justifyContent: 'center',
+        alignItems: 'center',
+        flexDirection: 'row',
+        justifyContent: 'center',
         marginVertical: 10,
     },
     dot: {

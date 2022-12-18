@@ -5,16 +5,19 @@ import {
     FlatList,
     ScrollView,
     TouchableNativeFeedback,
-} from "react-native";
-import React, { useState, useEffect } from "react";
+} from 'react-native';
+import React, { useState, useEffect } from 'react';
 
-import color from "../../constants/colors/color";
-import fonts from "../../constants/font-layout/font";
-import data, { calendarMonth } from "../../constants/data/calendarData";
-import LeftArrow from "../../components/svg-components/LeftArrow";
-import RightArrow from "../../components/svg-components/RightArrow";
+// CONSTANT
+import color from '../../constants/colors/color';
+import fonts from '../../constants/font-layout/font';
+import data, { calendarMonth } from '../../constants/data/calendarData';
 
-import { Calendar, CalendarList, Agenda } from "react-native-calendars";
+// SVG
+import LeftArrow from '../../assets/icons/svg-components/LeftArrow';
+import RightArrow from '../../assets/icons/svg-components/RightArrow';
+
+import { Calendar, CalendarList, Agenda } from 'react-native-calendars';
 
 const NoteList = () => {
     return (
@@ -73,18 +76,18 @@ const Schedule = () => {
     // }, [])
 
     const months = [
-        "Jan",
-        "Feb",
-        "Mar",
-        "Apr",
-        "May",
-        "Jun",
-        "Jul",
-        "Aug",
-        "Sep",
-        "Oct",
+        'Jan',
+        'Feb',
+        'Mar',
+        'Apr',
+        'May',
+        'Jun',
+        'Jul',
+        'Aug',
+        'Sep',
+        'Oct',
     ];
-    const Daysname = ["S", "M", "T", "W", "T", "F", "S"];
+    const Daysname = ['S', 'M', 'T', 'W', 'T', 'F', 'S'];
 
     const date = new Date();
     const [selectedYear, setYear] = useState(2022);
@@ -169,15 +172,15 @@ const Schedule = () => {
 
     const onNext = (data) => {
         if (selectedMonth < 11 && selectedMonth > 0) {
-            if (data == "increment") {
+            if (data == 'increment') {
                 setMonth(selectedMonth + 1);
             } else {
                 setMonth(selectedMonth - 1);
             }
-        } else if (selectedMonth == 11 && data == "increment") {
+        } else if (selectedMonth == 11 && data == 'increment') {
             setMonth(0);
             setYear(selectedYear + 1);
-        } else if (selectedMonth == 0 && data == "increment") {
+        } else if (selectedMonth == 0 && data == 'increment') {
             setMonth(selectedMonth + 1);
         } else if (selectedMonth == 0) {
             setYear(selectedYear - 1);
@@ -211,8 +214,8 @@ const Schedule = () => {
                     </View>
                     <View
                         style={{
-                            flexDirection: "row",
-                            justifyContent: "space-between",
+                            flexDirection: 'row',
+                            justifyContent: 'space-between',
                         }}
                     >
                         <TouchableNativeFeedback onPress={() => onNext()}>
@@ -225,7 +228,7 @@ const Schedule = () => {
                             </View>
                         </TouchableNativeFeedback>
                         <TouchableNativeFeedback
-                            onPress={() => onNext("increment")}
+                            onPress={() => onNext('increment')}
                         >
                             <View style={{ marginLeft: 15 }}>
                                 <RightArrow
@@ -276,14 +279,14 @@ const Styles = StyleSheet.create({
     },
     renderView: {
         flex: 1,
-        justifyContent: "center",
-        alignItems: "center",
+        justifyContent: 'center',
+        alignItems: 'center',
         marginBottom: 10,
     },
     dateFormat: {
-        flexDirection: "row",
-        justifyContent: "space-between",
-        alignItems: "center",
+        flexDirection: 'row',
+        justifyContent: 'space-between',
+        alignItems: 'center',
         marginVertical: 20,
         paddingHorizontal: 15,
     },
@@ -292,18 +295,18 @@ const Styles = StyleSheet.create({
         width: 30,
         height: 30,
         borderRadius: 30 / 2,
-        justifyContent: "center",
-        alignItems: "center",
+        justifyContent: 'center',
+        alignItems: 'center',
     },
     noteContainer: {
         flex: 1,
-        flexDirection: "row",
+        flexDirection: 'row',
         marginVertical: 15,
     },
     noteDate: {
         flex: 0.1,
-        justifyContent: "flex-start",
-        alignItems: "center",
+        justifyContent: 'flex-start',
+        alignItems: 'center',
         marginRight: 20,
     },
 });

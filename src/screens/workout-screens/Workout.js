@@ -1,13 +1,16 @@
-import { View, Text, StyleSheet, ScrollView } from "react-native";
-import React from "react";
+import { View, Text, StyleSheet, ScrollView } from 'react-native';
+import React from 'react';
 
-import CustomButton from "../../components/CustomButton";
-import WorkoutCard from "../../components/WorkoutCard";
-import Menu from "../menu-screens/Menu";
-import Home from "../home/Home";
-import color from "../../constants/colors/color";
-import fonts from "../../constants/font-layout/font";
-import { HeaderTitle } from "react-navigation-stack";
+// COMPONENT
+import CustomButton from '../../components/CustomButton';
+import WorkoutCard from '../../components/WorkoutCard';
+import Menu from '../menu-screens/Menu';
+import Home from '../home/Home';
+
+// CONSTANT
+import color from '../../constants/colors/color';
+import fonts from '../../constants/font-layout/font';
+import { HeaderTitle } from 'react-navigation-stack';
 
 const Workout = (props) => {
     const { navigation } = props;

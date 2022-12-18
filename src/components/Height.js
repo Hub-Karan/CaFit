@@ -1,8 +1,9 @@
-import { View, Text, StyleSheet, TextInput } from "react-native";
-import React from "react";
+import { View, Text, StyleSheet, TextInput } from 'react-native';
+import React from 'react';
 
-import fonts from "../constants/font-layout/font";
-import color from "../constants/colors/color";
+// CONSTANT
+import fonts from '../constants/font-layout/font';
+import color from '../constants/colors/color';
 
 const Height = (props) => {
     return (
@@ -17,7 +18,9 @@ const Height = (props) => {
                     <Text
                         style={{
                             ...fonts.regularFont4x,
-                            color: color.primaryColor,
+                            color: props.unitsColor
+                                ? props.unitsColor
+                                : color.primaryColor,
                         }}
                     >
                         {props.units}
@@ -26,7 +29,9 @@ const Height = (props) => {
                     <Text
                         style={{
                             ...fonts.regularFont4x,
-                            color: color.primaryColor,
+                            color: props.unitsColor
+                                ? props.unitsColor
+                                : color.primaryColor,
                         }}
                     >
                         Aug 25, 1990
@@ -40,18 +45,18 @@ const Height = (props) => {
 const Styles = StyleSheet.create({
     customSwitchContainer: {
         padding: 10,
-        flexDirection: "row",
-        justifyContent: "space-between",
+        flexDirection: 'row',
+        justifyContent: 'space-between',
         // justifyContent: "space-between",
-        alignItems: "center",
+        alignItems: 'center',
         paddingHorizontal: 17,
         borderBottomWidth: 0.2,
         marginHorizontal: 10,
     },
     userInfoContainer: {
-        flexDirection: "row",
-        justifyContent: "center",
-        alignItems: "center",
+        flexDirection: 'row',
+        justifyContent: 'center',
+        alignItems: 'center',
     },
 });
 

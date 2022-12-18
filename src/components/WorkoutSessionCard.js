@@ -1,12 +1,14 @@
-import { View, Text, TouchableOpacity } from "react-native";
-import React, { useState, useRef } from "react";
-import Video from "react-native-video";
+import { View, Text, TouchableOpacity } from 'react-native';
+import React, { useState, useRef } from 'react';
+import Video from 'react-native-video';
 
-import color from "../constants/colors/color";
-import fonts from "../constants/font-layout/font";
+// CONSTANT
+import color from '../constants/colors/color';
+import fonts from '../constants/font-layout/font';
 
-import Dot from "../assets/svg/dot.svg";
-import PlayButton from "../assets/svg/play-button.svg";
+// SVG
+import Dot from '../assets/svg/dot.svg';
+import PlayButton from '../assets/svg/play-button.svg';
 
 const WorkoutSessionCard = () => {
     const [paused, setPaused] = useState(true);
@@ -16,7 +18,7 @@ const WorkoutSessionCard = () => {
             <View style={{ flex: 0.8 }}>
                 <Video
                     source={{
-                        uri: "http://d23dyxeqlo5psv.cloudfront.net/big_buck_bunny.mp4",
+                        uri: 'http://d23dyxeqlo5psv.cloudfront.net/big_buck_bunny.mp4',
                     }}
                     style={{ flex: 1 }}
                     paused={paused}
@@ -26,9 +28,9 @@ const WorkoutSessionCard = () => {
                 />
                 <View
                     style={{
-                        justifyContent: "center",
-                        alignItems: "center",
-                        position: "absolute",
+                        justifyContent: 'center',
+                        alignItems: 'center',
+                        position: 'absolute',
                         top: 100,
                         left: 170,
                     }}
@@ -48,7 +50,7 @@ const WorkoutSessionCard = () => {
                         </View>
                     ) : (
                         <View
-                            style={{ flex: 1, width: "100%", height: "100%" }}
+                            style={{ flex: 1, width: '100%', height: '100%' }}
                         >
                             <TouchableOpacity
                                 onPress={() => setPaused(!paused)}
@@ -67,9 +69,9 @@ const WorkoutSessionCard = () => {
                 style={{
                     flex: 0.2,
                     backgroundColor: color.secondaryColor,
-                    justifyContent: "space-between",
-                    alignItems: "center",
-                    flexDirection: "row",
+                    justifyContent: 'space-between',
+                    alignItems: 'center',
+                    flexDirection: 'row',
                     paddingHorizontal: 20,
                 }}
             >

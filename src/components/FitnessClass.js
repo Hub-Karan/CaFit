@@ -1,9 +1,12 @@
-import { View, Text, StyleSheet } from "react-native";
-import React from "react";
+import { View, Text, StyleSheet } from 'react-native';
+import React from 'react';
 
-import Tick from "./svg-components/Tick";
-import fonts from "../constants/font-layout/font";
-import color from "../constants/colors/color";
+//SVG
+import Tick from '../assets/icons/svg-components/Tick';
+
+// CONSTANT
+import fonts from '../constants/font-layout/font';
+import color from '../constants/colors/color';
 
 const FitnessClass = (props) => {
     // console.log(props.isSelect, props.text, "class");
@@ -40,19 +43,19 @@ const Styles = StyleSheet.create({
     levelDescripContainer: {
         marginHorizontal: 10,
         marginTop: 15.5,
-        flexDirection: "row",
-        justifyContent: "space-between",
-        alignItems: "center",
+        flexDirection: 'row',
+        justifyContent: 'space-between',
+        alignItems: 'center',
     },
     levelDescrip: {
         fontSize: 18,
-        fontFamily: "Quicksand-Regular",
+        fontFamily: 'Quicksand-Regular',
         color: color.textGrey,
         // marginBottom: 20
     },
     levelSelectDescrip: {
         fontSize: 18,
-        fontFamily: "Quicksand-Regular",
+        fontFamily: 'Quicksand-Regular',
         color: color.primaryColor,
         paddingRight: 30,
 

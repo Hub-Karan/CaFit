@@ -1,8 +1,10 @@
-import { View, Text, TouchableNativeFeedback } from "react-native";
-import React from "react";
-import SvgLeft from "./svg-components/SvgLeft";
+import { View, Text, TouchableNativeFeedback } from 'react-native';
+import React from 'react';
 
-import { useNavigation } from "@react-navigation/native";
+// SVG
+import SvgLeft from '../assets/icons/svg-components/SvgLeft';
+
+import { useNavigation } from '@react-navigation/native';
 
 const HeaderLeft = (props) => {
     const navigation = useNavigation();

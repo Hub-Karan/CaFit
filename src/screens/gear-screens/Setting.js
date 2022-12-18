@@ -4,13 +4,15 @@ import {
     StyleSheet,
     TouchableOpacity,
     ScrollView,
-} from "react-native";
-import React from "react";
+} from 'react-native';
+import React from 'react';
 
-import CusSwitch from "../../components/CusSwitch";
+// COMPONENTS
+import CusSwitch from '../../components/CusSwitch';
 
-import color from "../../constants/colors/color";
-import fonts from "../../constants/font-layout/font";
+// CONSTANT
+import color from '../../constants/colors/color';
+import fonts from '../../constants/font-layout/font';
 
 const SettingSwitch = (props) => {
     return (
@@ -36,7 +38,7 @@ const Setting = (props) => {
     return (
         <ScrollView contentContainerStyle={{ flexGrow: 1 }}>
             <View style={Styles.settingMainContainer}>
-                <SettingSwitch title={"Reminders"} />
+                <SettingSwitch title={'Reminders'} />
                 <View style={Styles.settingSwitchContainer}>
                     <View>
                         <Text
@@ -49,7 +51,7 @@ const Setting = (props) => {
                         </Text>
                     </View>
                     <TouchableOpacity
-                        onPress={() => props.navigation.navigate("SettingLang")}
+                        onPress={() => props.navigation.navigate('SettingLang')}
                     >
                         <View style={Styles.languageContainer}>
                             <Text
@@ -76,7 +78,7 @@ const Setting = (props) => {
                     </View>
                     <TouchableOpacity
                         onPress={() =>
-                            props.navigation.navigate("SettingSocial")
+                            props.navigation.navigate('SettingSocial')
                         }
                     >
                         <View style={Styles.languageContainer}>
@@ -91,11 +93,11 @@ const Setting = (props) => {
                         </View>
                     </TouchableOpacity>
                 </View>
-                <SettingSwitch title={"Apply Health"} />
-                <SettingSwitch title={"Warm-Up"} />
-                <SettingSwitch title={"Cool-Down"} />
-                <SettingSwitch title={"Auto-Pause"} />
-                <SettingSwitch title={"Pause for Runnig"} />
+                <SettingSwitch title={'Apply Health'} />
+                <SettingSwitch title={'Warm-Up'} />
+                <SettingSwitch title={'Cool-Down'} />
+                <SettingSwitch title={'Auto-Pause'} />
+                <SettingSwitch title={'Pause for Runnig'} />
             </View>
         </ScrollView>
     );
@@ -108,14 +110,14 @@ const Styles = StyleSheet.create({
         padding: 20,
     },
     settingSwitchContainer: {
-        flexDirection: "row",
-        justifyContent: "space-between",
-        alignItems: "center",
+        flexDirection: 'row',
+        justifyContent: 'space-between',
+        alignItems: 'center',
         marginVertical: 10,
         paddingTop: 8,
         paddingBottom: 14,
         borderBottomWidth: 1,
-        borderColor: "#E6E6E6",
+        borderColor: '#E6E6E6',
     },
     languageContainer: {
         borderWidth: 1,

@@ -1,9 +1,12 @@
-import { View, Text, StyleSheet } from "react-native";
-import React from "react";
+import { View, Text, StyleSheet } from 'react-native';
+import React from 'react';
 
-import color from "../../constants/colors/color";
-import fonts from "../../constants/font-layout/font";
-import CusSwitch from "../../components/CusSwitch";
+// CONSTANT
+import color from '../../constants/colors/color';
+import fonts from '../../constants/font-layout/font';
+
+// COMPONENT
+import CusSwitch from '../../components/CusSwitch';
 
 const WaterSetting = () => {
     return (
@@ -164,69 +167,69 @@ const Styles = StyleSheet.create({
         backgroundColor: color.secondaryColor,
     },
     dailyGoalHeaderContainer: {
-        width: "100%",
+        width: '100%',
         zIndex: 1,
         height: 2,
         borderColor: color.primaryColor,
         backgroundColor: color.primaryColor,
         borderColor: color.primaryColor,
-        position: "relative",
-        justifyContent: "center",
+        position: 'relative',
+        justifyContent: 'center',
         opacity: 1,
     },
     dailyGoalContainer: {
-        width: "80%",
+        width: '80%',
         backgroundColor: color.primaryColor,
         borderWidth: 2,
         borderColor: color.primaryColor,
-        position: "absolute",
+        position: 'absolute',
         opacity: 1,
     },
     dailyDisplayContainer: {
-        flexDirection: "row",
-        justifyContent: "space-between",
-        alignItems: "center",
+        flexDirection: 'row',
+        justifyContent: 'space-between',
+        alignItems: 'center',
         marginVertical: 13,
     },
     cupContainer: {
-        width: "60%",
+        width: '60%',
         backgroundColor: color.primaryColor,
         borderWidth: 2,
         borderColor: color.primaryColor,
-        position: "absolute",
+        position: 'absolute',
         opacity: 1,
     },
     cupDisplayContainer: {
-        flexDirection: "row",
-        justifyContent: "space-between",
-        alignItems: "center",
+        flexDirection: 'row',
+        justifyContent: 'space-between',
+        alignItems: 'center',
         marginVertical: 13,
     },
     waterDisplayContainer: {
-        flexDirection: "row",
-        justifyContent: "space-between",
-        alignItems: "center",
+        flexDirection: 'row',
+        justifyContent: 'space-between',
+        alignItems: 'center',
     },
     intervalHeaderContainer: {
-        width: "40%",
+        width: '40%',
         backgroundColor: color.primaryColor,
         borderWidth: 2,
         borderColor: color.primaryColor,
-        position: "absolute",
+        position: 'absolute',
         opacity: 1,
     },
     intervalContainer: {
-        flexDirection: "row",
-        justifyContent: "space-between",
-        alignItems: "center",
+        flexDirection: 'row',
+        justifyContent: 'space-between',
+        alignItems: 'center',
         marginVertical: 13,
         paddingBottom: 10,
         borderBottomWidth: 0.5,
     },
     startContainer: {
-        flexDirection: "row",
-        justifyContent: "space-between",
-        alignItems: "center",
+        flexDirection: 'row',
+        justifyContent: 'space-between',
+        alignItems: 'center',
         marginVertical: 13,
         paddingBottom: 20,
         borderBottomWidth: 0.5,

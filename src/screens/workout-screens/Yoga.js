@@ -4,28 +4,31 @@ import {
     StyleSheet,
     TouchableOpacity,
     ScrollView,
-} from "react-native";
-import React, { useState } from "react";
+} from 'react-native';
+import React, { useState } from 'react';
 
-import Video from "react-native-video";
-import color from "../../constants/colors/color";
-import fonts from "../../constants/font-layout/font";
+// REACT NATIVE VIDEO
+import Video from 'react-native-video';
 
-import Star from "../../components/svg-components/Star";
-import Like from "../../components/svg-components/Like";
-import Redirect from "../../components/svg-components/Redirect";
+// CONSTANT
+import color from '../../constants/colors/color';
+import fonts from '../../constants/font-layout/font';
 
-import PlayButton from "../../assets/svg/play-button.svg";
+// SVG
+import Star from '../../assets/icons/svg-components/Star';
+import Like from '../../assets/icons/svg-components/Like';
+import Redirect from '../../assets/icons/svg-components/Redirect';
+import PlayButton from '../../assets/svg/play-button.svg';
 
 const Yoga = () => {
     const [paused, setPaused] = useState(true);
 
     return (
         <View style={Styles.yogaMainContainer}>
-            <View style={{ height: "33%" }}>
+            <View style={{ height: '33%' }}>
                 <Video
                     source={{
-                        uri: "http://d23dyxeqlo5psv.cloudfront.net/big_buck_bunny.mp4",
+                        uri: 'http://d23dyxeqlo5psv.cloudfront.net/big_buck_bunny.mp4',
                     }}
                     style={{ flex: 1 }}
                     paused={paused}
@@ -49,7 +52,7 @@ const Yoga = () => {
                         </View>
                     ) : (
                         <View
-                            style={{ flex: 1, width: "100%", height: "100%" }}
+                            style={{ flex: 1, width: '100%', height: '100%' }}
                         >
                             <TouchableOpacity
                                 onPress={() => setPaused(!paused)}
@@ -57,7 +60,7 @@ const Yoga = () => {
                                 <PlayButton
                                     style={{ opacity: 0 }}
                                     width={300}
-                                    height={300}
+                                    height={50}
                                 />
                             </TouchableOpacity>
                         </View>
@@ -68,27 +71,27 @@ const Yoga = () => {
             <View style={Styles.feedbackContainer}>
                 <View
                     style={{
-                        flexDirection: "row",
-                        justifyContent: "space-around",
+                        flexDirection: 'row',
+                        justifyContent: 'space-around',
                     }}
                 >
                     <View style={{ marginRight: 5 }}>
-                        <Star height={16} width={16} fill={"#FF9B70"} />
+                        <Star height={16} width={16} fill={'#FF9B70'} />
                     </View>
                     <View style={{ marginRight: 5 }}>
-                        <Star height={16} width={16} fill={"#FF9B70"} />
+                        <Star height={16} width={16} fill={'#FF9B70'} />
                     </View>
                     <View style={{ marginRight: 5 }}>
-                        <Star height={16} width={16} fill={"#FF9B70"} />
+                        <Star height={16} width={16} fill={'#FF9B70'} />
                     </View>
                     <View style={{ marginRight: 5 }}>
-                        <Star height={16} width={16} fill={"#FF9B70"} />
+                        <Star height={16} width={16} fill={'#FF9B70'} />
                     </View>
                     <Star height={16} width={16} fill={color.textGrey} />
                 </View>
                 <View
                     style={{
-                        flexDirection: "row",
+                        flexDirection: 'row',
                     }}
                 >
                     <View style={{ marginRight: 20 }}>
@@ -191,16 +194,16 @@ const Styles = StyleSheet.create({
     },
     feedbackContainer: {
         flex: 0.3,
-        flexDirection: "row",
-        alignItems: "center",
-        justifyContent: "space-between",
+        flexDirection: 'row',
+        alignItems: 'center',
+        justifyContent: 'space-between',
         paddingHorizontal: 20,
         marginTop: 5,
     },
     playBtnContainer: {
-        justifyContent: "center",
-        alignItems: "center",
-        position: "absolute",
+        justifyContent: 'center',
+        alignItems: 'center',
+        position: 'absolute',
         top: 70,
         left: 170,
     },

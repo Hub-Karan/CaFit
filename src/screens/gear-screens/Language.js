@@ -1,9 +1,12 @@
-import { View, Text, TouchableNativeFeedback, StyleSheet } from "react-native";
-import React from "react";
-import color from "../../constants/colors/color";
+import { View, Text, TouchableNativeFeedback, StyleSheet } from 'react-native';
+import React from 'react';
 
-import Tick from "../../components/svg-components/Tick";
-import fonts from "../../constants/font-layout/font";
+// CONSTANT
+import color from '../../constants/colors/color';
+import fonts from '../../constants/font-layout/font';
+
+// SVG
+import Tick from '../../assets/icons/svg-components/Tick';
 
 const LanguageList = (props) => {
     return (
@@ -19,8 +22,8 @@ const LanguageList = (props) => {
                         {props.language}
                     </Text>
                 </View>
-                <View style={{ flex: 0.2, alignItems: "flex-end" }}>
-                    <Tick width={20} height={20} fill={"green"} />
+                <View style={{ flex: 0.2, alignItems: 'flex-end' }}>
+                    <Tick width={20} height={20} fill={'green'} />
                 </View>
             </View>
         </TouchableNativeFeedback>
@@ -48,15 +51,15 @@ const Language = () => {
 
 const styles = StyleSheet.create({
     languageListContainer: {
-        flexDirection: "row",
-        justifyContent: "space-between",
-        alignItems: "center",
+        flexDirection: 'row',
+        justifyContent: 'space-between',
+        alignItems: 'center',
         paddingVertical: 20,
         paddingHorizontal: 10,
 
         marginVertical: 5,
         borderBottomWidth: 1,
-        borderColor: "#E6E6E6",
+        borderColor: '#E6E6E6',
     },
 });
 

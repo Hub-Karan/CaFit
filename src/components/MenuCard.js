@@ -5,16 +5,17 @@ import {
     StyleSheet,
     Image,
     Dimensions,
-} from "react-native";
-import React from "react";
+} from 'react-native';
+import React from 'react';
 
-import fonts from "../constants/font-layout/font";
+// CONSTANT
+import fonts from '../constants/font-layout/font';
 
-const { width: windowWidth, height: windowHeight } = Dimensions.get("window");
+const { width: windowWidth, height: windowHeight } = Dimensions.get('window');
 
 const MenuCard = (props) => {
     return (
-        <View style={{ justifyContent: "center", alignItems: "center" }}>
+        <View style={{ justifyContent: 'center', alignItems: 'center' }}>
             <TouchableNativeFeedback onPress={props.onPress}>
                 <View style={Styles.menuCardContainer}>
                     <View style={Styles.menuImgContainer}>
@@ -29,7 +30,7 @@ const MenuCard = (props) => {
                             style={{
                                 ...fonts.regularBoldFont,
                                 paddingHorizontal: 4,
-                                color: "black",
+                                color: 'black',
                             }}
                         >
                             {props.text}
@@ -47,8 +48,8 @@ const Styles = StyleSheet.create({
         borderRadius: 9,
         width: windowWidth / 3.4,
         height: windowHeight * 0.15,
-        justifyContent: "center",
-        alignItems: "center",
+        justifyContent: 'center',
+        alignItems: 'center',
         margin: 5,
     },
     textContainer: {

@@ -1,21 +1,24 @@
-import { View, Text, StyleSheet, TouchableNativeFeedback } from "react-native";
-import React from "react";
+import { View, Text, StyleSheet, TouchableNativeFeedback } from 'react-native';
+import React from 'react';
 
-import CustomButton from "../components/CustomButton";
-import color from "../constants/colors/color";
-import fonts from "../constants/font-layout/font";
-import { useNavigation } from "@react-navigation/native";
+// COMPONENT
+import CustomButton from '../components/CustomButton';
+
+// CONSTANT
+import color from '../constants/colors/color';
+import fonts from '../constants/font-layout/font';
+import { useNavigation } from '@react-navigation/native';
 
 const WorkoutCard = (props) => {
     return (
         <View
-            style={{
-                ...Styles.workoutContainer,
-                backgroundColor: props.bgColor,
-            }}
+            style={[
+                Styles.workoutContainer,
+                { backgroundColor: props.bgColor },
+            ]}
         >
             <TouchableNativeFeedback
-                onPress={() => props.navigation?.navigate("WorkoutSession")}
+                onPress={() => props.navigation?.navigate('WorkoutSession')}
             >
                 <View style={{ padding: 20, flex: 1 }}>
                     <Text
@@ -50,7 +53,7 @@ const WorkoutCard = (props) => {
                             fontSize={12}
                             onPress={() =>
                                 props.navigation?.navigate(
-                                    "ExcerciseDetailsScreen"
+                                    'ExcerciseDetailsScreen'
                                 )
                             }
                         />
@@ -63,22 +66,22 @@ const WorkoutCard = (props) => {
 
 const Styles = StyleSheet.create({
     workoutContainer: {
-        width: "90%",
+        width: '90%',
         height: 220,
-        backgroundColor: "grey",
-        alignSelf: "center",
+        backgroundColor: 'grey',
+        alignSelf: 'center',
         borderRadius: 12,
         marginVertical: 10,
-        position: "relative",
+        position: 'relative',
     },
     workoutBtnContainer: {
         backgroundColor: color.primaryColor,
-        width: "27%",
+        width: '27%',
         borderRadius: 21,
-        position: "absolute",
+        position: 'absolute',
         bottom: 20,
         right: 20,
-        overflow: "hidden",
+        overflow: 'hidden',
     },
 });
 

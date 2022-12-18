@@ -1,5 +1,5 @@
-import { View, Text, StyleSheet, Dimensions, ScrollView } from "react-native";
-import React, { useState, useEffect } from "react";
+import { View, Text, StyleSheet, Dimensions, ScrollView } from 'react-native';
+import React, { useState, useEffect, useLayoutEffect } from 'react';
 import {
     LineChart,
     BarChart,
@@ -7,17 +7,19 @@ import {
     ProgressChart,
     ContributionGraph,
     StackedBarChart,
-} from "react-native-chart-kit";
+} from 'react-native-chart-kit';
 
-import color from "../../constants/colors/color";
-import fonts from "../../constants/font-layout/font";
-import SvgStrat from "../../components/svg-components/SvgStrat";
+// CONSTANT
+import color from '../../constants/colors/color';
+import fonts from '../../constants/font-layout/font';
+import data, { calendarMonth } from '../../constants/data/calendarData';
 
-import data, { calendarMonth } from "../../constants/data/calendarData";
-import RightArrows from "../../components/svg-components/RightArrow";
-import LeftArrow from "../../components/svg-components/LeftArrow";
+// SVG
+import SvgStrat from '../../assets/icons/svg-components/SvgStrat';
+import RightArrows from '../../assets/icons/svg-components/RightArrow';
+import LeftArrow from '../../assets/icons/svg-components/LeftArrow';
 
-const TrainingStrat = () => {
+const TrainingStrat = ({ navigation }) => {
     const todayDate = new Date();
     const [date, setDate] = useState({});
 
@@ -31,14 +33,16 @@ const TrainingStrat = () => {
     }, [data]);
 
     return (
-        <ScrollView>
+        <ScrollView
+            contentContainerStyle={{ backgroundColor: color.secondaryColor }}
+        >
             <View>
                 <View
                     style={{
-                        justifyContent: "space-around",
-                        alignItems: "center",
+                        justifyContent: 'space-around',
+                        alignItems: 'center',
                         marginVertical: 10,
-                        flexDirection: "row",
+                        flexDirection: 'row',
                     }}
                 >
                     <View style={{ opacity: 0.5 }}>
@@ -66,8 +70,8 @@ const TrainingStrat = () => {
                 </View>
                 <View
                     style={{
-                        alignItems: "center",
-                        justifyContent: "center",
+                        alignItems: 'center',
+                        justifyContent: 'center',
                         marginTop: 20,
                     }}
                 >
@@ -77,13 +81,13 @@ const TrainingStrat = () => {
                     style={{
                         paddingHorizontal: 20,
                         marginTop: 15,
-                        flexDirection: "row",
-                        alignItems: "center",
+                        flexDirection: 'row',
+                        alignItems: 'center',
                     }}
                 >
                     <View
                         style={{
-                            backgroundColor: "#CDF2F2",
+                            backgroundColor: '#CDF2F2',
                             width: 10,
                             height: 10,
                             borderRadius: 10 / 2,
@@ -105,13 +109,13 @@ const TrainingStrat = () => {
                     style={{
                         paddingHorizontal: 20,
                         marginTop: 5,
-                        flexDirection: "row",
-                        alignItems: "center",
+                        flexDirection: 'row',
+                        alignItems: 'center',
                     }}
                 >
                     <View
                         style={{
-                            backgroundColor: "#FFC6AD",
+                            backgroundColor: '#FFC6AD',
                             width: 10,
                             height: 10,
                             borderRadius: 10 / 2,
@@ -179,13 +183,13 @@ const Styles = StyleSheet.create({
         flex: 2,
     },
     child2: {
-        backgroundColor: "blue",
+        // backgroundColor: "blue",
         flex: 1,
     },
     trainingStratTextContainer: {
         paddingHorizontal: 20,
         paddingVertical: 10,
-        justifyContent: "center",
+        justifyContent: 'center',
         // alignItems: "center",
     },
 });

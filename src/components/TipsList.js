@@ -1,9 +1,12 @@
-import { View, Text, Pressable, StyleSheet } from "react-native";
-import React from "react";
+import { View, Text, Pressable, StyleSheet } from 'react-native';
+import React from 'react';
 
-import color from "../constants/colors/color";
-import fonts from "../constants/font-layout/font";
-import RightArrows from "./svg-components/RightArrow";
+// CONSTANT
+import color from '../constants/colors/color';
+import fonts from '../constants/font-layout/font';
+
+// SVG
+import RightArrows from '../assets/icons/svg-components/RightArrow';
 
 const TipsList = (props) => {
     return (
@@ -44,14 +47,14 @@ const TipsList = (props) => {
 
 const Styles = StyleSheet.create({
     listContainer: {
-        flexDirection: "row",
-        justifyContent: "space-between",
-        alignItems: "center",
+        flexDirection: 'row',
+        justifyContent: 'space-between',
+        alignItems: 'center',
 
         padding: 10,
         marginVertical: 10,
         borderBottomWidth: 1,
-        borderColor: "#E6E6E6",
+        borderColor: '#E6E6E6',
     },
 });
 

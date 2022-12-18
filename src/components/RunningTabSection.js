@@ -1,17 +1,20 @@
-import { View, Text } from "react-native";
-import React from "react";
+import { View, Text } from 'react-native';
+import React from 'react';
 
-import color from "../constants/colors/color";
-import fonts from "../constants/font-layout/font";
-import SvgDensityMeter from "./svg-components/SvgDensityMeter";
-import SvgSpeedMeter from "./svg-components/SvgSpeedMeter";
-import SvgMapMeter from "./svg-components/SvgMapMeter";
-import SvgHeartMeter from "./svg-components/SvgHeartMeter";
-import SvgDensityLine from "./svg-components/SvgDensityLine";
-import SvgSpeedLine from "./svg-components/SvgSpeedLine";
-import SvgMapLine from "./svg-components/SvgMapLine";
-import SvgHeartLine from "./svg-components/SvgHeartLine";
-import SvgClockMeter from "./svg-components/SvgClockMeter";
+// CONSTANT
+import color from '../constants/colors/color';
+import fonts from '../constants/font-layout/font';
+
+// SVG
+import SvgDensityMeter from '../assets/icons/svg-components/SvgDensityMeter';
+import SvgSpeedMeter from '../assets/icons/svg-components/SvgSpeedMeter';
+import SvgMapMeter from '../assets/icons/svg-components/SvgMapMeter';
+import SvgHeartMeter from '../assets/icons/svg-components/SvgHeartMeter';
+import SvgDensityLine from '../assets/icons/svg-components/SvgDensityLine';
+import SvgSpeedLine from '../assets/icons/svg-components/SvgSpeedLine';
+import SvgMapLine from '../assets/icons/svg-components/SvgMapLine';
+import SvgHeartLine from '../assets/icons/svg-components/SvgHeartLine';
+import SvgClockMeter from '../assets/icons/svg-components/SvgClockMeter';
 
 const RunningTabSection = (props) => {
     const componentObj = {
@@ -28,8 +31,8 @@ const RunningTabSection = (props) => {
                 <Text
                     style={{
                         ...fonts.regularBoldFont4x,
-                        textAlign: "center",
-                        justifyContent: "center",
+                        textAlign: 'center',
+                        justifyContent: 'center',
                         flex: props.isDefault ? 0.4 : null,
                         color: color.textGrey,
                         // marginTop: props.isDefault ? null : 30,
@@ -40,7 +43,7 @@ const RunningTabSection = (props) => {
             )}
 
             {props.svgComponent && (
-                <View style={{ alignItems: "center" }}>
+                <View style={{ alignItems: 'center' }}>
                     {componentObj[props.title]}
                 </View>
             )}
@@ -53,13 +56,13 @@ const RunningTabSection = (props) => {
                         width: 250,
                         height: 250,
                         borderRadius: 250 / 2,
-                        justifyContent: "flex-end",
-                        alignItems: "center",
-                        alignSelf: "center",
-                        position: "relative",
+                        justifyContent: 'flex-end',
+                        alignItems: 'center',
+                        alignSelf: 'center',
+                        position: 'relative',
                     }}
                 >
-                    <View style={{ position: "absolute", top: 50 }}>
+                    <View style={{ position: 'absolute', top: 50 }}>
                         <Text
                             style={{
                                 ...fonts.largeFont69,
@@ -71,7 +74,7 @@ const RunningTabSection = (props) => {
                         <Text
                             style={{
                                 ...fonts.mediumFontXs,
-                                textAlign: "center",
+                                textAlign: 'center',
                             }}
                         ></Text>
                     </View>
@@ -83,10 +86,10 @@ const RunningTabSection = (props) => {
 
 export const RunningLineSection = (props) => {
     const componentObj = {
-        Density: <SvgDensityLine width={"100%"} />,
-        Speed: <SvgSpeedLine width={"100%"} />,
-        Length: <SvgMapLine width={"100%"} />,
-        Heart: <SvgHeartLine width={"100%"} />,
+        Density: <SvgDensityLine width={'100%'} />,
+        Speed: <SvgSpeedLine width={'100%'} />,
+        Length: <SvgMapLine width={'100%'} />,
+        Heart: <SvgHeartLine width={'100%'} />,
     };
 
     return <>{componentObj[props.title]}</>;

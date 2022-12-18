@@ -1,19 +1,20 @@
-import { View, Text, StyleSheet, Image } from "react-native";
-import React from "react";
+import { View, Text, StyleSheet, Image } from 'react-native';
+import React from 'react';
 
-import fonts from "../constants/font-layout/font";
-import color from "../constants/colors/color";
+// CONSTANT
+import fonts from '../constants/font-layout/font';
+import color from '../constants/colors/color';
 
 const ExcerciseList = (props) => {
     return (
         <View style={Styles.excerciseDetailsContainer}>
             <View style={Styles.excerciseItemContainer}>
-                <View style={{ flexDirection: "row", alignItems: "center" }}>
+                <View style={{ flexDirection: 'row', alignItems: 'center' }}>
                     <View style={Styles.outsideCircle}>
                         <View style={Styles.insideCircle}>
                             <Text
                                 style={{
-                                    color: "white",
+                                    color: 'white',
                                     ...fonts.regularBoldFont4x,
                                 }}
                             >
@@ -42,7 +43,7 @@ const ExcerciseList = (props) => {
                 </View>
             </View>
             <View>
-                <Image source={require("../assets/tooltip.png")} />
+                <Image source={require('../assets/images/tooltip.png')} />
             </View>
         </View>
     );
@@ -50,19 +51,19 @@ const ExcerciseList = (props) => {
 
 const Styles = StyleSheet.create({
     excerciseDetailsContainer: {
-        flexDirection: "row",
-        justifyContent: "space-around",
+        flexDirection: 'row',
+        justifyContent: 'space-around',
         marginVertical: 10,
-        alignItems: "center",
+        alignItems: 'center',
         marginVertical: 15,
     },
     outsideCircle: {
         height: 44,
         width: 44,
-        backgroundColor: "lightgrey",
+        backgroundColor: 'lightgrey',
         borderRadius: 44 / 2,
-        justifyContent: "center",
-        alignItems: "center",
+        justifyContent: 'center',
+        alignItems: 'center',
         elevation: 3,
         padding: 10,
         marginRight: 10,
@@ -71,9 +72,9 @@ const Styles = StyleSheet.create({
         height: 33,
         width: 33,
         borderRadius: 33 / 2,
-        backgroundColor: "grey",
-        justifyContent: "center",
-        alignItems: "center",
+        backgroundColor: 'grey',
+        justifyContent: 'center',
+        alignItems: 'center',
     },
 });
 

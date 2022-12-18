@@ -1,23 +1,17 @@
-import {
-    View,
-    Text,
-    StyleSheet,
-    TouchableOpacity,
-    Animated,
-    Pressable,
-} from "react-native";
-import React, { useState, useEffect, useRef } from "react";
+import { View, Animated, Pressable } from 'react-native';
+import React, { useState, useEffect, useRef } from 'react';
 
-import color from "../constants/colors/color";
+// CONSTANT
+import color from '../constants/colors/color';
 
 const CusSwitch = (props) => {
-    const [isToggle, setIsToggle] = useState(false);
+    // const [isToggle, setIsToggle] = useState(false);
     const [value, setValue] = useState(false);
 
     const customSwitch = useRef(new Animated.Value(0)).current;
     // console.log(customSwitch,"switch");
 
-    const switchPress = (props) => {
+    const switchPress = () => {
         let val = parseInt(JSON.stringify(customSwitch));
         setValue((prev) => {
             return !prev;
@@ -47,18 +41,18 @@ const CusSwitch = (props) => {
         <View
             style={{
                 flex: 1,
-                backgroundColor: "white",
-                justifyContent: "center",
-                alignItems: "center",
+                backgroundColor: 'white',
+                justifyContent: 'center',
+                alignItems: 'center',
             }}
         >
             <Pressable
                 onPress={() => switchPress()}
                 style={{
                     width: props.width,
-                    alignItems: "center",
+                    alignItems: 'center',
                     borderRadius: 10,
-                    justifyContent: "center",
+                    justifyContent: 'center',
                 }}
             >
                 <View
@@ -69,22 +63,22 @@ const CusSwitch = (props) => {
                             ? color.primaryColor
                             : color.textGrey,
                         borderRadius: 80,
-                        flexDirection: "row",
-                        overflow: "hidden",
+                        flexDirection: 'row',
+                        overflow: 'hidden',
                         // marginHorizontal: 30,
                     }}
                 >
                     <Animated.View
                         style={{
                             width: props.width / 2,
-                            backgroundColor: "white",
+                            backgroundColor: 'white',
                             borderRadius: 40,
-                            height: "90%",
-                            alignSelf: "center",
+                            height: '90%',
+                            alignSelf: 'center',
                             margin: 2,
                             transform: [{ translateX: itemSwitch }],
                         }}
-                    ></Animated.View>
+                    />
                 </View>
             </Pressable>
         </View>

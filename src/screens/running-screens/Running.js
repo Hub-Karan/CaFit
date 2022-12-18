@@ -6,32 +6,35 @@ import {
     ScrollView,
     TouchableOpacity,
     TouchableNativeFeedback,
-} from "react-native";
-import React, { useState, useEffect } from "react";
+} from 'react-native';
+import React, { useState, useEffect } from 'react';
 
-import color from "../../constants/colors/color";
-import fonts from "../../constants/font-layout/font";
+// CONSTANT
+import color from '../../constants/colors/color';
+import fonts from '../../constants/font-layout/font';
+import data, { calendarMonth } from '../../constants/data/calendarData';
+import runningData, { runningInfo } from '../../constants/data/runningData';
 
-import WaterMeter from "../../components/svg-components/WaterMeter";
-import Gear from "../../components/svg-components/Gear";
-import Circle from "../../components/svg-components/Circle";
-import Cups from "../../components/svg-components/Cups";
-import CustomButton from "../../components/CustomButton";
-import Clock from "../../components/svg-components/Clock";
-import Battery from "../../components/svg-components/Battery";
-import Meter from "../../components/svg-components/Meter";
-import Heart from "../../components/svg-components/Heart";
-import Map from "../../components/svg-components/Map";
-import ProgressLine from "../../components/svg-components/ProgressLine";
-import SvgHeartMeter from "../../components/svg-components/SvgHeartMeter";
-
-import data, { calendarMonth } from "../../constants/data/calendarData";
-import runningData, { runningInfo } from "../../constants/data/runningData";
-import Pause from "../../components/svg-components/Pause";
-import Lock from "../../components/svg-components/Lock";
+// COMPONENT
+import CustomButton from '../../components/CustomButton';
 import RunningTabSection, {
     RunningLineSection,
-} from "../../components/RunningTabSection";
+} from '../../components/RunningTabSection';
+
+// SVG
+import WaterMeter from '../../assets/icons/svg-components/WaterMeter';
+import Gear from '../../assets/icons/svg-components/Gear';
+import Circle from '../../assets/icons/svg-components/Circle';
+import Cups from '../../assets/icons/svg-components/Cups';
+import Clock from '../../assets/icons/svg-components/Clock';
+import Battery from '../../assets/icons/svg-components/Battery';
+import Meter from '../../assets/icons/svg-components/Meter';
+import Heart from '../../assets/icons/svg-components/Heart';
+import Map from '../../assets/icons/svg-components/Map';
+import ProgressLine from '../../assets/icons/svg-components/ProgressLine';
+import SvgHeartMeter from '../../assets/icons/svg-components/SvgHeartMeter';
+import Pause from '../../assets/icons/svg-components/Pause';
+import Lock from '../../assets/icons/svg-components/Lock';
 
 // const Running = () => {
 //     const todayDate = new Date();
@@ -127,7 +130,7 @@ import RunningTabSection, {
 // };
 
 const Running = ({ navigation }) => {
-    const [screenTab, setScreenTab] = useState("Heart");
+    const [screenTab, setScreenTab] = useState('Heart');
 
     return (
         <View style={Styles.trainingPlanContainer}>
@@ -136,12 +139,12 @@ const Running = ({ navigation }) => {
             <View style={Styles.cardMainContainer}>
                 <View style={Styles.cardContainer}>
                     <TouchableNativeFeedback
-                        onPress={() => setScreenTab("Clock")}
+                        onPress={() => setScreenTab('Clock')}
                     >
                         <View style={Styles.iconWrapper}>
-                            {screenTab === "Clock" ? (
+                            {screenTab === 'Clock' ? (
                                 <>
-                                    <Clock width={20} fill={"black"} />
+                                    <Clock width={20} fill={'black'} />
                                     <View style={Styles.iconSeparator} />
                                 </>
                             ) : (
@@ -154,12 +157,12 @@ const Running = ({ navigation }) => {
                     </TouchableNativeFeedback>
 
                     <TouchableNativeFeedback
-                        onPress={() => setScreenTab("Density")}
+                        onPress={() => setScreenTab('Density')}
                     >
                         <View style={Styles.iconWrapper}>
-                            {screenTab === "Density" ? (
+                            {screenTab === 'Density' ? (
                                 <>
-                                    <Battery width={20} fill={"black"} />
+                                    <Battery width={20} fill={'black'} />
                                     <View style={Styles.iconSeparator} />
                                 </>
                             ) : (
@@ -172,12 +175,12 @@ const Running = ({ navigation }) => {
                     </TouchableNativeFeedback>
 
                     <TouchableNativeFeedback
-                        onPress={() => setScreenTab("Speed")}
+                        onPress={() => setScreenTab('Speed')}
                     >
                         <View style={Styles.iconWrapper}>
-                            {screenTab === "Speed" ? (
+                            {screenTab === 'Speed' ? (
                                 <>
-                                    <Meter width={20} fill={"black"} />
+                                    <Meter width={20} fill={'black'} />
                                     <View style={Styles.iconSeparator} />
                                 </>
                             ) : (
@@ -190,12 +193,12 @@ const Running = ({ navigation }) => {
                     </TouchableNativeFeedback>
 
                     <TouchableNativeFeedback
-                        onPress={() => setScreenTab("Length")}
+                        onPress={() => setScreenTab('Length')}
                     >
                         <View style={Styles.iconWrapper}>
-                            {screenTab === "Length" ? (
+                            {screenTab === 'Length' ? (
                                 <>
-                                    <Map width={20} fill={"black"} />
+                                    <Map width={20} fill={'black'} />
                                     <View style={Styles.iconSeparator} />
                                 </>
                             ) : (
@@ -208,11 +211,11 @@ const Running = ({ navigation }) => {
                     </TouchableNativeFeedback>
 
                     <TouchableNativeFeedback
-                        onPress={() => setScreenTab("Heart")}
+                        onPress={() => setScreenTab('Heart')}
                     >
                         <View style={Styles.iconWrapper}>
-                            {screenTab === "Heart" ? (
-                                <Heart width={20} fill={"black"} />
+                            {screenTab === 'Heart' ? (
+                                <Heart width={20} fill={'black'} />
                             ) : (
                                 <Heart width={20} fill={color.textGrey} />
                             )}
@@ -225,10 +228,10 @@ const Running = ({ navigation }) => {
                         style={{
                             // alignItems: "center",
                             flex: 2,
-                            justifyContent: "center",
+                            justifyContent: 'center',
                         }}
                     >
-                        {screenTab === "Cloc" ? (
+                        {screenTab === 'Cloc' ? (
                             <RunningTabSection title="Time" isDefault={true} />
                         ) : (
                             <RunningTabSection
@@ -237,9 +240,9 @@ const Running = ({ navigation }) => {
                             />
                         )}
                     </View>
-                    <View style={{ flex: screenTab === "Clock" ? 0.2 : 0.4 }}>
-                        {screenTab === "Clock" ? (
-                            <ProgressLine width={"100%"} />
+                    <View style={{ flex: screenTab === 'Clock' ? 0.2 : 0.4 }}>
+                        {screenTab === 'Clock' ? (
+                            <ProgressLine width={'100%'} />
                         ) : (
                             <RunningLineSection title={screenTab} />
                         )}
@@ -248,11 +251,11 @@ const Running = ({ navigation }) => {
             </View>
             <View style={Styles.bottomSection}>
                 <View
-                    style={{ justifyContent: "center", alignItems: "center" }}
+                    style={{ justifyContent: 'center', alignItems: 'center' }}
                 >
                     <TouchableOpacity
-                        onPress={() => navigation.navigate("RunningSetting")}
-                        style={{ alignItems: "center" }}
+                        onPress={() => navigation.navigate('RunningSetting')}
+                        style={{ alignItems: 'center' }}
                     >
                         <Gear width={20} height={20} />
                         <Text
@@ -273,7 +276,7 @@ const Running = ({ navigation }) => {
                     </View>
                 </TouchableNativeFeedback>
                 <View
-                    style={{ justifyContent: "center", alignItems: "center" }}
+                    style={{ justifyContent: 'center', alignItems: 'center' }}
                 >
                     <Lock width={20} height={20} />
                     <Text
@@ -294,12 +297,12 @@ const Styles = StyleSheet.create({
     trainingPlanContainer: {
         flex: 1,
         backgroundColor: color.secondaryColor,
-        alignItems: "center",
+        alignItems: 'center',
     },
     cardMainContainer: {
         borderRadius: 8,
-        width: "80%",
-        height: "80%",
+        width: '80%',
+        height: '80%',
         elevation: 2,
         zIndex: 99,
         backgroundColor: color.secondaryColor,
@@ -308,13 +311,13 @@ const Styles = StyleSheet.create({
         marginTop: -90,
     },
     cardContainer: {
-        flexDirection: "row",
-        justifyContent: "space-between",
-        alignItems: "center",
+        flexDirection: 'row',
+        justifyContent: 'space-between',
+        alignItems: 'center',
         // paddingHorizontal: 30,
         paddingVertical: 15,
         height: 70,
-        backgroundColor: "#F8F6F9",
+        backgroundColor: '#F8F6F9',
         borderTopLeftRadius: 19,
         borderTopRightRadius: 19,
         // borderWidth: 1,
@@ -322,44 +325,44 @@ const Styles = StyleSheet.create({
 
     cardInfoContainer: {
         flex: 10,
-        justifyContent: "center",
+        justifyContent: 'center',
     },
     iconWrapper: {
         flex: 1,
-        height: "100%",
-        justifyContent: "center",
-        alignItems: "center",
+        height: '100%',
+        justifyContent: 'center',
+        alignItems: 'center',
     },
     iconSeparator: {
         // flex: 1,
         backgroundColor: color.textGrey,
-        height: "100%",
+        height: '100%',
         width: 1,
         opacity: 0.8,
         // borderColor: color.primaryColor,
-        position: "absolute",
+        position: 'absolute',
         right: 0,
     },
     upperSection: {
         height: 100,
         backgroundColor: color.primaryColor,
-        width: "100%",
+        width: '100%',
     },
     bottomSection: {
-        flexDirection: "row",
-        justifyContent: "space-between",
-        alignItems: "center",
-        width: "80%",
+        flexDirection: 'row',
+        justifyContent: 'space-between',
+        alignItems: 'center',
+        width: '80%',
         flex: 1,
     },
     pauseContainer: {
         backgroundColor: color.primaryColor,
 
         height: 40,
-        width: "50%",
+        width: '50%',
         borderRadius: 30,
-        justifyContent: "center",
-        alignItems: "center",
+        justifyContent: 'center',
+        alignItems: 'center',
     },
 });
 

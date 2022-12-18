@@ -7,19 +7,21 @@ import {
     FlatList,
     Dimensions,
     Animated,
-} from "react-native";
-import React, { useRef, useState } from "react";
+} from 'react-native';
+import React, { useRef, useState } from 'react';
 
-import ExcerciseList from "../../components/ExcerciseList";
+// COMPONENT
+import ExcerciseList from '../../components/ExcerciseList';
+import CustomButton from '../../components/CustomButton';
+import ExcerciseCard from '../../components/ExcerciseCard';
 
-import fonts from "../../constants/font-layout/font";
-import color from "../../constants/colors/color";
-import CustomButton from "../../components/CustomButton";
-import ExcerciseCard from "../../components/ExcerciseCard";
+// CONSTANT
+import fonts from '../../constants/font-layout/font';
+import color from '../../constants/colors/color';
 
-const { width: windowWidth, height: windowHeight } = Dimensions.get("window");
+const { width: windowWidth, height: windowHeight } = Dimensions.get('window');
 
-const data = new Array(5).fill("Running");
+const data = new Array(5).fill('Running');
 const FIXED_SIZE = windowWidth * 0.75;
 const CARD_SIZE = windowWidth * 0.8;
 
@@ -44,26 +46,26 @@ const Home = ({ navigation }) => {
             <View
                 style={{
                     width: FIXED_SIZE,
-                    justifyContent: "center",
-                    alignItems: "center",
+                    justifyContent: 'center',
+                    alignItems: 'center',
                     marginLeft: index === 0 ? 40 : null,
                     marginRight: index === 4 ? 50 : null,
                 }}
             >
                 <Animated.View
                     style={{
-                        backgroundColor: "grey",
-                        width: "85%",
-                        height: "70%",
+                        backgroundColor: 'grey',
+                        width: '85%',
+                        height: '70%',
                         borderRadius: 19,
-                        position: "relative",
+                        position: 'relative',
                         transform: [{ scaleY: adjustHeight }],
                     }}
                 >
                     <Text
                         style={{
                             ...fonts.regularBoldFont2x,
-                            position: "absolute",
+                            position: 'absolute',
                             bottom: 15,
                             left: 15,
                             color: color.secondaryColor,
@@ -221,46 +223,46 @@ const Styles = StyleSheet.create({
     },
     child1: {
         flex: 2,
-        justifyContent: "center",
-        alignItems: "center",
+        justifyContent: 'center',
+        alignItems: 'center',
     },
     child2: {
         flex: 4,
-        backgroundColor: "white",
+        backgroundColor: color.secondaryColor,
         // justifyContent: "center",
-        alignItems: "center",
+        alignItems: 'center',
     },
 
     fitnessDetailsCard: {
-        justifyContent: "center",
-        backgroundColor: "white",
-        height: "90%",
+        justifyContent: 'center',
+        backgroundColor: 'white',
+        height: '90%',
         width: CARD_SIZE,
         borderRadius: 10,
         elevation: 10,
     },
     excerciseContainer: {
-        justifyContent: "center",
-        alignItems: "center",
+        justifyContent: 'center',
+        alignItems: 'center',
     },
     trainStartBtn: {
-        alignSelf: "center",
+        alignSelf: 'center',
         backgroundColor: color.primaryColor,
-        width: "60%",
+        width: '60%',
         borderRadius: 29,
         marginTop: 20,
-        overflow: "hidden",
+        overflow: 'hidden',
     },
     fitnessCard: {
         backgroundColor: color.grey,
-        height: "70%",
+        height: '70%',
         // width: windowWidth*0.8,
         borderRadius: 10,
         elevation: 10,
-        position: "relative",
+        position: 'relative',
     },
     fitnessCardTextContainer: {
-        position: "absolute",
+        position: 'absolute',
         bottom: 15,
         left: 15,
     },

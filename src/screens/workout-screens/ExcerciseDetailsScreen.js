@@ -6,18 +6,21 @@ import {
     FlatList,
     TouchableOpacity,
     TouchableNativeFeedback,
-} from "react-native";
-import React, { useState } from "react";
-import Video from "react-native-video";
+} from 'react-native';
+import React, { useState } from 'react';
 
-import color from "../../constants/colors/color";
-import fonts from "../../constants/font-layout/font";
+// REACT NATIVE VIDEO
+import Video from 'react-native-video';
 
-import Star from "../../components/svg-components/Star";
-import Like from "../../components/svg-components/Like";
-import Redirect from "../../components/svg-components/Redirect";
+// CONSTANT
+import color from '../../constants/colors/color';
+import fonts from '../../constants/font-layout/font';
 
-import PlayButton from "../../assets/svg/play-button.svg";
+// SVG
+import Star from '../../assets/icons/svg-components/Star';
+import Like from '../../assets/icons/svg-components/Like';
+import Redirect from '../../assets/icons/svg-components/Redirect';
+import PlayButton from '../../assets/svg/play-button.svg';
 
 const ExcerciseDetailsScreen = ({ navigation }) => {
     const [paused, setPaused] = useState(true);
@@ -25,12 +28,12 @@ const ExcerciseDetailsScreen = ({ navigation }) => {
         <ScrollView contentContainerStyle={{ flexGrow: 1 }}>
             <View style={{ flex: 1, backgroundColor: color.secondaryColor }}>
                 <View style={{ flex: 3 }}>
-                    <View style={{ height: 210, marginBottom: 10 }}>
+                    <View style={{ height: 210 }}>
                         <Video
                             source={{
-                                uri: "http://d23dyxeqlo5psv.cloudfront.net/big_buck_bunny.mp4",
+                                uri: 'http://d23dyxeqlo5psv.cloudfront.net/big_buck_bunny.mp4',
                             }}
-                            style={{ flex: 1 }}
+                            style={{ flex: 1, marginBottom: 10 }}
                             paused={paused}
                             posterResizeMode="cover"
                             poster="https://upload.wikimedia.org/wikipedia/commons/thumb/3/34/English_Cocker_Spaniel_4.jpg/800px-English_Cocker_Spaniel_4.jpg"
@@ -54,8 +57,8 @@ const ExcerciseDetailsScreen = ({ navigation }) => {
                                 <View
                                     style={{
                                         flex: 1,
-                                        width: "100%",
-                                        height: "100%",
+                                        width: '100%',
+                                        height: '100%',
                                     }}
                                 >
                                     <TouchableOpacity
@@ -64,7 +67,7 @@ const ExcerciseDetailsScreen = ({ navigation }) => {
                                         <PlayButton
                                             style={{ opacity: 0 }}
                                             width={300}
-                                            height={300}
+                                            height={50}
                                         />
                                     </TouchableOpacity>
                                 </View>
@@ -75,21 +78,21 @@ const ExcerciseDetailsScreen = ({ navigation }) => {
                     <View style={Styles.feedbackContainer}>
                         <View
                             style={{
-                                flexDirection: "row",
-                                justifyContent: "space-around",
+                                flexDirection: 'row',
+                                justifyContent: 'space-around',
                             }}
                         >
                             <View style={{ marginRight: 5 }}>
-                                <Star height={16} width={16} fill={"#FF9B70"} />
+                                <Star height={16} width={16} fill={'#FF9B70'} />
                             </View>
                             <View style={{ marginRight: 5 }}>
-                                <Star height={16} width={16} fill={"#FF9B70"} />
+                                <Star height={16} width={16} fill={'#FF9B70'} />
                             </View>
                             <View style={{ marginRight: 5 }}>
-                                <Star height={16} width={16} fill={"#FF9B70"} />
+                                <Star height={16} width={16} fill={'#FF9B70'} />
                             </View>
                             <View style={{ marginRight: 5 }}>
-                                <Star height={16} width={16} fill={"#FF9B70"} />
+                                <Star height={16} width={16} fill={'#FF9B70'} />
                             </View>
                             <Star
                                 height={16}
@@ -99,7 +102,7 @@ const ExcerciseDetailsScreen = ({ navigation }) => {
                         </View>
                         <View
                             style={{
-                                flexDirection: "row",
+                                flexDirection: 'row',
                             }}
                         >
                             <View style={{ marginRight: 20 }}>
@@ -125,7 +128,7 @@ const ExcerciseDetailsScreen = ({ navigation }) => {
                             paddingHorizontal: 20,
                             flex: 0.2,
                             marginVertical: 10,
-                            justifyContent: "center",
+                            justifyContent: 'center',
                         }}
                     >
                         <Text
@@ -141,23 +144,23 @@ const ExcerciseDetailsScreen = ({ navigation }) => {
                         style={{
                             flex: 0.8,
                             paddingHorizontal: 20,
-                            flexDirection: "row",
+                            flexDirection: 'row',
                         }}
                     >
                         <ScrollView
                             horizontal={true}
                             showsHorizontalScrollIndicator={false}
                         >
-                            <View style={{ justifyContent: "center" }}>
+                            <View style={{ justifyContent: 'center' }}>
                                 <TouchableNativeFeedback
-                                    style={{ overflow: "hidden" }}
+                                    style={{ overflow: 'hidden' }}
                                     onPress={() => {
-                                        navigation.navigate("Yoga");
+                                        navigation.navigate('Yoga');
                                     }}
                                 >
                                     <View
                                         style={{
-                                            backgroundColor: "grey",
+                                            backgroundColor: 'grey',
                                             width: 150,
                                             height: 90,
                                             marginRight: 12,
@@ -174,16 +177,16 @@ const ExcerciseDetailsScreen = ({ navigation }) => {
                                 </Text>
                             </View>
 
-                            <View style={{ justifyContent: "center" }}>
+                            <View style={{ justifyContent: 'center' }}>
                                 <TouchableNativeFeedback
-                                    style={{ overflow: "hidden" }}
+                                    style={{ overflow: 'hidden' }}
                                     onPress={() => {
-                                        navigation.navigate("Yoga");
+                                        navigation.navigate('Yoga');
                                     }}
                                 >
                                     <View
                                         style={{
-                                            backgroundColor: "grey",
+                                            backgroundColor: 'grey',
                                             width: 150,
                                             height: 90,
                                             marginRight: 12,
@@ -199,16 +202,16 @@ const ExcerciseDetailsScreen = ({ navigation }) => {
                                     Running
                                 </Text>
                             </View>
-                            <View style={{ justifyContent: "center" }}>
+                            <View style={{ justifyContent: 'center' }}>
                                 <TouchableNativeFeedback
-                                    style={{ overflow: "hidden" }}
+                                    style={{ overflow: 'hidden' }}
                                     onPress={() => {
-                                        navigation.navigate("Yoga");
+                                        navigation.navigate('Yoga');
                                     }}
                                 >
                                     <View
                                         style={{
-                                            backgroundColor: "grey",
+                                            backgroundColor: 'grey',
                                             width: 150,
                                             height: 90,
                                             marginRight: 12,
@@ -231,7 +234,12 @@ const ExcerciseDetailsScreen = ({ navigation }) => {
                     style={{ backgroundColor: color.secondaryColor, flex: 3 }}
                 >
                     <View style={{ flex: 1, paddingHorizontal: 20 }}>
-                        <Text style={{ ...fonts.regularBoldFont4x }}>
+                        <Text
+                            style={{
+                                ...fonts.regularBoldFont4x,
+                                color: color.textGrey,
+                            }}
+                        >
                             17 Responses
                         </Text>
                     </View>
@@ -296,41 +304,41 @@ const Styles = StyleSheet.create({
         backgroundColor: color.secondaryColor,
     },
     bannerImgContainer: {
-        height: "33%",
+        height: '33%',
         backgroundColor: color.textGrey,
     },
     likesMeterContainer: {
-        flexDirection: "row",
-        justifyContent: "space-between",
-        alignItems: "center",
+        flexDirection: 'row',
+        justifyContent: 'space-between',
+        alignItems: 'center',
         marginVertical: 10,
         marginHorizontal: 20,
     },
     playBtnContainer: {
-        justifyContent: "center",
-        alignItems: "center",
-        position: "absolute",
+        justifyContent: 'center',
+        alignItems: 'center',
+        position: 'absolute',
         top: 70,
         left: 170,
     },
     feedbackContainer: {
         flex: 1,
-        flexDirection: "row",
-        alignItems: "center",
-        justifyContent: "space-between",
+        flexDirection: 'row',
+        alignItems: 'center',
+        justifyContent: 'space-between',
         paddingHorizontal: 20,
         marginTop: 10,
     },
     recommendContainer: {
         backgroundColor: color.secondaryColor,
         flex: 1,
-        justifyContent: "center",
+        justifyContent: 'center',
         marginVertical: 15,
     },
     boxContainer: {
-        flexDirection: "row",
-        justifyContent: "flex-start",
-        alignItems: "center",
+        flexDirection: 'row',
+        justifyContent: 'flex-start',
+        alignItems: 'center',
         paddingHorizontal: 20,
         marginVertical: 10,
     },

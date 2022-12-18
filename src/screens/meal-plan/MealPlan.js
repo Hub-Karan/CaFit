@@ -1,12 +1,15 @@
-import { View, Text } from "react-native";
-import React from "react";
+import { View, Text } from 'react-native';
+import React from 'react';
 
-import { createMaterialTopTabNavigator } from "@react-navigation/material-top-tabs";
-import Water from "./Water";
-import Food from "./Food";
+import { createMaterialTopTabNavigator } from '@react-navigation/material-top-tabs';
 
-import color from "../../constants/colors/color";
-import fonts from "../../constants/font-layout/font";
+// COMPONENT
+import Water from './Water';
+import Food from './Food';
+
+// CONSTANT
+import color from '../../constants/colors/color';
+import fonts from '../../constants/font-layout/font';
 
 const TopTab = createMaterialTopTabNavigator();
 
@@ -25,10 +28,10 @@ const MealPlan = () => {
             }}
         >
             <TopTab.Screen
-                name={"Water"}
+                name={'Water'}
                 component={Water}
                 options={{
-                    title: "Water",
+                    title: 'Water',
                     tabBarActiveTintColor: color.primaryColor,
                     tabBarInactiveTintColor: color.textGrey,
                     tabBarIndicatorStyle: {
@@ -36,7 +39,7 @@ const MealPlan = () => {
                     },
                     tabBarLabelStyle: {
                         ...fonts.regularBoldFont4x,
-                        textTransform: "capitalize",
+                        textTransform: 'capitalize',
                     },
                     tabBarIndicatorStyle: {
                         backgroundColor: color.primaryColor,
@@ -46,10 +49,10 @@ const MealPlan = () => {
                 }}
             />
             <TopTab.Screen
-                name={"Food"}
+                name={'Food'}
                 component={Food}
                 options={{
-                    title: "Food",
+                    title: 'Food',
                     tabBarActiveTintColor: color.primaryColor,
                     tabBarInactiveTintColor: color.textGrey,
                     tabBarIndicatorStyle: {
@@ -57,7 +60,7 @@ const MealPlan = () => {
                     },
                     tabBarLabelStyle: {
                         ...fonts.regularBoldFont4x,
-                        textTransform: "capitalize",
+                        textTransform: 'capitalize',
                     },
                     tabBarIndicatorStyle: {
                         backgroundColor: color.primaryColor,

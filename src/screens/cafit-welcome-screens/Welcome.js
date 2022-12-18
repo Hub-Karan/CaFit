@@ -1,10 +1,12 @@
-import { View, Text, Image, StyleSheet } from "react-native";
-import React from "react";
+import { View, Text, Image, StyleSheet } from 'react-native';
+import React from 'react';
 
-import CustomButton from "../../components/CustomButton";
+// COMPONENT
+import CustomButton from '../../components/CustomButton';
 
-import color from "../../constants/colors/color";
-import fonts from "../../constants/font-layout/font";
+// CONSTANT
+import color from '../../constants/colors/color';
+import fonts from '../../constants/font-layout/font';
 
 const Welcome = ({ navigation }) => {
     return (
@@ -22,7 +24,7 @@ const Welcome = ({ navigation }) => {
                 <View styles={Styles.welcomeImgContainer}>
                     <Image
                         style={Styles.welcomeImg}
-                        source={require("../../assets/welcome-image.png")}
+                        source={require('../../assets/images/welcome-image.png')}
                     />
                 </View>
                 <View style={Styles.headerContainer}>
@@ -51,7 +53,7 @@ const Welcome = ({ navigation }) => {
                     <CustomButton
                         title="Get Started"
                         color="white"
-                        onPress={() => navigation.navigate("FitnessLevel")}
+                        onPress={() => navigation.navigate('FitnessLevel')}
                     />
                 </View>
                 <View style={Styles.dotContainer}>
@@ -66,28 +68,28 @@ const Welcome = ({ navigation }) => {
 
 const Styles = StyleSheet.create({
     customBtnContainer: {
-        backgroundColor: "#FF9B70",
-        width: "90%",
+        backgroundColor: '#FF9B70',
+        width: '90%',
         borderRadius: 30,
         marginTop: 20,
-        overflow: "hidden",
-        justifyContent: "center",
+        overflow: 'hidden',
+        justifyContent: 'center',
     },
     welcomeContainer: {
-        justifyContent: "center",
-        alignItems: "center",
+        justifyContent: 'center',
+        alignItems: 'center',
         flex: 1,
-        backgroundColor: "white",
+        backgroundColor: 'white',
         padding: 10,
     },
     welcomeHeaderContainer: {
         flex: 1,
-        alignItems: "center",
-        justifyContent: "center",
+        alignItems: 'center',
+        justifyContent: 'center',
     },
     welcomeImageContainer: {
-        justifyContent: "center",
-        alignItems: "center",
+        justifyContent: 'center',
+        alignItems: 'center',
         flex: 2,
     },
     stepContainer: {
@@ -105,27 +107,27 @@ const Styles = StyleSheet.create({
         marginBottom: 23,
     },
     headerText: {
-        textAlign: "center",
+        textAlign: 'center',
         color: color.textGrey,
     },
     paraContainer: {
         paddingHorizontal: 41,
     },
     paraText: {
-        textAlign: "center",
+        textAlign: 'center',
         color: color.textGrey,
     },
     customBottomContainer: {
-        width: "100%",
-        justifyContent: "flex-end",
-        alignItems: "center",
+        width: '100%',
+        justifyContent: 'flex-end',
+        alignItems: 'center',
         flex: 1,
     },
     dotContainer: {
-        justifyContent: "center",
-        alignItems: "center",
-        flexDirection: "row",
-        justifyContent: "center",
+        justifyContent: 'center',
+        alignItems: 'center',
+        flexDirection: 'row',
+        justifyContent: 'center',
         marginTop: 15,
     },
     activeDot: {

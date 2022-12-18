@@ -1,11 +1,15 @@
-import { View, Text } from "react-native";
-import React from "react";
+import { View, Text } from 'react-native';
+import React from 'react';
 
-import { createMaterialTopTabNavigator } from "@react-navigation/material-top-tabs";
-import FullBody from "./FullBody";
-import Foot from "./Foot";
-import color from "../../constants/colors/color";
-import fonts from "../../constants/font-layout/font";
+import { createMaterialTopTabNavigator } from '@react-navigation/material-top-tabs';
+
+// COMPONENT
+import FullBody from './FullBody';
+import Foot from './Foot';
+
+// CONSTANT
+import color from '../../constants/colors/color';
+import fonts from '../../constants/font-layout/font';
 
 const TopTab = createMaterialTopTabNavigator();
 
@@ -20,14 +24,15 @@ const Excercise = () => {
             }}
         >
             <TopTab.Screen
-                name={"FullBody"}
+                name={'FullBody'}
                 component={FullBody}
                 options={{
-                    title: "Full body",
+                    title: 'Full body',
                     tabBarActiveTintColor: color.primaryColor,
                     tabBarInactiveTintColor: color.textGrey,
                     tabBarLabelStyle: {
-                        textTransform: "capitalize",
+                        ...fonts.regularBoldFont,
+                        textTransform: 'capitalize',
                     },
                     tabBarIndicatorStyle: {
                         backgroundColor: color.primaryColor,
@@ -35,14 +40,15 @@ const Excercise = () => {
                 }}
             />
             <TopTab.Screen
-                name={"Foot"}
+                name={'Foot'}
                 component={Foot}
                 options={{
-                    title: "Foot",
+                    title: 'Foot',
                     tabBarActiveTintColor: color.primaryColor,
                     tabBarInactiveTintColor: color.textGrey,
                     tabBarLabelStyle: {
-                        textTransform: "capitalize",
+                        ...fonts.regularBoldFont,
+                        textTransform: 'capitalize',
                     },
                     tabBarIndicatorStyle: {
                         backgroundColor: color.primaryColor,
@@ -50,14 +56,15 @@ const Excercise = () => {
                 }}
             />
             <TopTab.Screen
-                name={"Arm"}
+                name={'Arm'}
                 component={Foot}
                 options={{
-                    title: "Arm",
+                    title: 'Arm',
                     tabBarActiveTintColor: color.primaryColor,
                     tabBarInactiveTintColor: color.textGrey,
                     tabBarLabelStyle: {
-                        textTransform: "capitalize",
+                        ...fonts.regularBoldFont,
+                        textTransform: 'capitalize',
                     },
                     tabBarIndicatorStyle: {
                         backgroundColor: color.primaryColor,
@@ -65,14 +72,15 @@ const Excercise = () => {
                 }}
             />
             <TopTab.Screen
-                name={"Body"}
+                name={'Body'}
                 component={Foot}
                 options={{
-                    title: "Body",
+                    title: 'Body',
                     tabBarActiveTintColor: color.primaryColor,
                     tabBarInactiveTintColor: color.textGrey,
                     tabBarLabelStyle: {
-                        textTransform: "capitalize",
+                        ...fonts.regularBoldFont,
+                        textTransform: 'capitalize',
                     },
                     tabBarIndicatorStyle: {
                         backgroundColor: color.primaryColor,

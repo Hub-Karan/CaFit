@@ -1,15 +1,18 @@
-import { View, Text, StyleSheet, TouchableNativeFeedback } from "react-native";
-import React from "react";
+import { View, Text, StyleSheet, TouchableNativeFeedback } from 'react-native';
+import React from 'react';
 
-import fonts from "../../constants/font-layout/font";
-import color from "../../constants/colors/color";
-import FacebookIcon from "../../components/svg-components/svg-icons/FacebookIcon";
-import Tick from "../../components/svg-components/Tick";
-import TwitterIcon from "../../components/svg-components/svg-icons/TwitterIcon";
-import LinkedIcon from "../../components/svg-components/svg-icons/LinkedIcon";
-import PinterestIcon from "../../components/svg-components/svg-icons/PinterestIcon";
-import RedditIcon from "../../components/svg-components/svg-icons/RedditIcon";
-import TumblrIcon from "../../components/svg-components/svg-icons/TumblrIcon";
+// CONSTANT
+import fonts from '../../constants/font-layout/font';
+import color from '../../constants/colors/color';
+
+// SVG
+import FacebookIcon from '../../assets/icons/svg-social-icons/FacebookIcon';
+import Tick from '../../assets/icons/svg-components/Tick';
+import TwitterIcon from '../../assets/icons/svg-social-icons/TwitterIcon';
+import LinkedIcon from '../../assets/icons/svg-social-icons/LinkedIcon';
+import PinterestIcon from '../../assets/icons/svg-social-icons/PinterestIcon';
+import RedditIcon from '../../assets/icons/svg-social-icons/RedditIcon';
+import TumblrIcon from '../../assets/icons/svg-social-icons/TumblrIcon';
 
 const SocialCard = (props) => {
     return (
@@ -41,13 +44,13 @@ const SocialCard = (props) => {
 
 const Social = () => {
     return (
-        <View style={{ flex: 1 }}>
+        <View style={{ flex: 1, backgroundColor: color.secondaryColor }}>
             <View style={Styles.child1}>
                 <Text
                     style={{
                         ...fonts.regularFont4x,
                         color: color.textGrey,
-                        textAlign: "center",
+                        textAlign: 'center',
                     }}
                 >
                     Choose to Connect Social network
@@ -55,13 +58,13 @@ const Social = () => {
             </View>
             <View style={Styles.child2}>
                 <SocialCard
-                    fill={"#19D60B"}
+                    fill={'#19D60B'}
                     text="Connect to Facebook"
                     socialComponent={<FacebookIcon />}
                     bgColor="#6F82FE"
                 />
                 <SocialCard
-                    fill={"#19D60B"}
+                    fill={'#19D60B'}
                     text="Connect to Facebook"
                     socialComponent={<TwitterIcon />}
                     bgColor="#70C0FC"
@@ -102,22 +105,22 @@ const Styles = StyleSheet.create({
     },
     child1: {
         flex: 1,
-        justifyContent: "center",
-        alignItems: "center",
+        justifyContent: 'center',
+        alignItems: 'center',
     },
     child2: {
         flex: 9,
         // backgroundColor: "yellow",
     },
     socialcardContainer: {
-        flexDirection: "row",
+        flexDirection: 'row',
         height: 60,
-        width: "90%",
-        justifyContent: "space-around",
-        alignSelf: "center",
-        backgroundColor: "blue",
+        width: '90%',
+        justifyContent: 'space-around',
+        alignSelf: 'center',
+        backgroundColor: 'blue',
         borderRadius: 10,
-        alignItems: "center",
+        alignItems: 'center',
         marginVertical: 10,
     },
 });

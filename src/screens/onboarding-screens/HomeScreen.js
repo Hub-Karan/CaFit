@@ -1,4 +1,4 @@
-import React, { useRef, useEffect, useState } from "react";
+import React, { useRef, useEffect, useState } from 'react';
 import {
     View,
     Text,
@@ -7,16 +7,17 @@ import {
     ImageBackground,
     FlatList,
     Dimensions,
-} from "react-native";
+} from 'react-native';
 
-import CustomButton from "../../components/CustomButton";
+// COMPONENT
+import CustomButton from '../../components/CustomButton';
 
-import data from "../../onboarding/data";
+// CONSTANT
+import data from '../../constants/data/onboardingData';
+import color from '../../constants/colors/color';
+import fonts from '../../constants/font-layout/font';
 
-import color from "../../constants/colors/color";
-import fonts from "../../constants/font-layout/font";
-
-const { width: windowWidth, height: windowHeight } = Dimensions.get("window");
+const { width: windowWidth, height: windowHeight } = Dimensions.get('window');
 
 const HomeScreen = ({ navigation }) => {
     const flatlistRef = useRef(null);
@@ -26,7 +27,7 @@ const HomeScreen = ({ navigation }) => {
     const onStartPress = () => {
         // count.current++
         if (active == 2) {
-            navigation.navigate("Welcome");
+            navigation.navigate('Welcome');
         } else {
             // setActive(active + 1)
             flatlistRef.current.scrollToIndex({
@@ -55,7 +56,7 @@ const HomeScreen = ({ navigation }) => {
                                 style={{
                                     ...fonts.primaryFont,
                                     color: color.primaryColor,
-                                    textAlign: "center",
+                                    textAlign: 'center',
                                     marginVertical: 49,
                                 }}
                             >
@@ -64,8 +65,8 @@ const HomeScreen = ({ navigation }) => {
                         </View>
                         <View
                             style={{
-                                alignSelf: "center",
-                                position: "relative",
+                                alignSelf: 'center',
+                                position: 'relative',
                                 bottom: windowHeight * 0.15,
                             }}
                         >
@@ -76,11 +77,11 @@ const HomeScreen = ({ navigation }) => {
                         </View>
                     </View>
 
-                    <View style={{ flex: 1, justifyContent: "center" }}>
+                    <View style={{ flex: 1, justifyContent: 'center' }}>
                         <View
                             style={{
                                 flex: 1,
-                                position: "relative",
+                                position: 'relative',
                                 top: windowHeight * 0.05,
                             }}
                         >
@@ -89,7 +90,7 @@ const HomeScreen = ({ navigation }) => {
                                     ...fonts.regularBoldFont,
                                     color: color.secondaryColor,
                                     paddingHorizontal: 40,
-                                    textAlign: "center",
+                                    textAlign: 'center',
                                 }}
                             >
                                 {item.text}
@@ -106,12 +107,12 @@ const HomeScreen = ({ navigation }) => {
             <ImageBackground
                 style={{
                     bottom: windowHeight * 0.2,
-                    height: "90%",
-                    position: "relative",
+                    height: '90%',
+                    position: 'relative',
                     flex: 1,
                 }}
                 resizeMode="cover"
-                source={require("../../assets/whiteCircle.png")}
+                source={require('../../assets/images/whiteCircle.png')}
             >
                 <FlatList
                     scrollEnabled={true}
@@ -136,7 +137,7 @@ const HomeScreen = ({ navigation }) => {
                 <View style={Styles.dotContainer}>
                     <View
                         style={{
-                            backgroundColor: "white",
+                            backgroundColor: 'white',
                             height: 12,
                             width: 12,
                             borderRadius: 15 / 2,
@@ -146,7 +147,7 @@ const HomeScreen = ({ navigation }) => {
                     ></View>
                     <View
                         style={{
-                            backgroundColor: "white",
+                            backgroundColor: 'white',
                             height: 12,
                             width: 12,
                             borderRadius: 15 / 2,
@@ -156,7 +157,7 @@ const HomeScreen = ({ navigation }) => {
                     ></View>
                     <View
                         style={{
-                            backgroundColor: "white",
+                            backgroundColor: 'white',
                             height: 12,
                             width: 12,
                             borderRadius: 15 / 2,
@@ -180,11 +181,11 @@ const HomeScreen = ({ navigation }) => {
 const Styles = StyleSheet.create({
     customBtnContainer: {
         backgroundColor: color.secondaryColor,
-        width: "90%",
+        width: '90%',
         borderRadius: 19,
         marginTop: 20,
-        overflow: "hidden",
-        justifyContent: "center",
+        overflow: 'hidden',
+        justifyContent: 'center',
         bottom: windowHeight * -0.1,
     },
     mainScreen: {
@@ -198,37 +199,37 @@ const Styles = StyleSheet.create({
     bgImageContainer: {
         flex: 1,
         backgroundColor: color.primaryColor,
-        position: "relative",
+        position: 'relative',
     },
     bgImage: {
         flex: 1,
-        position: "relative",
-        top: "-13%",
-        height: "80%",
+        position: 'relative',
+        top: '-13%',
+        height: '80%',
     },
     headerContainer: {
-        justifyContent: "center",
-        alignItems: "center",
-        position: "relative",
-        top: "10%",
+        justifyContent: 'center',
+        alignItems: 'center',
+        position: 'relative',
+        top: '10%',
     },
     iconContainer: {
-        position: "relative",
-        top: "25%",
-        justifyContent: "center",
-        alignItems: "center",
+        position: 'relative',
+        top: '25%',
+        justifyContent: 'center',
+        alignItems: 'center',
     },
     mainHeader: {
         color: color.primaryColor,
         marginTop: 49,
-        justifyContent: "center",
-        alignItems: "center",
+        justifyContent: 'center',
+        alignItems: 'center',
     },
     bottomContainer: {
-        justifyContent: "center",
-        alignItems: "center",
-        position: "relative",
-        bottom: "0%",
+        justifyContent: 'center',
+        alignItems: 'center',
+        position: 'relative',
+        bottom: '0%',
         flex: 1,
     },
     bottomTextContainer: {
@@ -238,24 +239,24 @@ const Styles = StyleSheet.create({
     bottomText: {
         color: color.secondaryColor,
         marginHorizontal: 63,
-        textAlign: "center",
+        textAlign: 'center',
     },
     customBtnViewContainer: {
-        backgroundColor: "white",
+        backgroundColor: 'white',
         borderRadius: 30,
-        position: "relative",
+        position: 'relative',
         bottom: windowHeight * 0.02,
         width: windowWidth * 0.9,
-        alignSelf: "center",
-        overflow: "hidden",
+        alignSelf: 'center',
+        overflow: 'hidden',
         top: windowHeight * 0.15,
     },
     dotContainer: {
-        justifyContent: "center",
+        justifyContent: 'center',
         top: windowHeight * 0.13,
-        alignItems: "center",
-        flexDirection: "row",
-        justifyContent: "center",
+        alignItems: 'center',
+        flexDirection: 'row',
+        justifyContent: 'center',
     },
 });
 
